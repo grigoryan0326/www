@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* font-family: 'Poppins', sans-serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    background: #fff;
+    color: #000;
+}
+
+a {
+    text-decoration: none;
+    font: inherit;
+    background: inherit;
+    color: inherit;
+    transition: .4s;
+}
+
+ul,
+li,
+ol {
+    font: inherit;
+    list-style-type: none;
+    color: inherit;
+}
+
+button {
+    display: inline-block;
+    background: inherit;
+    cursor: pointer;
+    transition: .4s;
+    border: none;
+}
+
+.container {
+    max-width: 1230px;
+    padding: 0 30px;
+    height: auto;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* HEADER */
+
+#header {
+    padding-top: 46px;
+    background: #f1f1f1;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 76px;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 32px;
+    position: relative;
+    padding-right: 12px;
+}
+
+.logo::after {
+    content: "";
+    position: absolute;
+    bottom: 3px;
+    right: 0px;
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: #FDA300;
+    border-radius: 50%;
+}
+
+.header__list {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 50px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.list__item__active {
+    color: #606060;
+}
+
+.list__link:hover {
+    color: #FDA300;
+}
+
+.list__link__active:hover {
+    color: #606060;
+}
+
+.nav__btn {
+    display: none;
+}
+
+.header__row {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 30px;
+}
+
+.header__title {
+    font-weight: 600;
+    font-style: 44px;
+    margin-bottom: 20px;
+}
+
+.header__text {
+    line-height: 2;
+    font-size: 14px;
+    max-width: 500px;
+}
+
+.header__content {
+    margin-top: 124px;
+}
+
+/* SERVICES */
+
+#services {
+    padding: 90px 0;
+}
+
+.services-row {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 30px;
+    flex-wrap: wrap;
+    row-gap: 60px;
+}
+
+.services__card {
+    flex: 1 1 0;
+    min-width: 315px;
+}
+
+.services-card__img {
+    margin-bottom: 30px;
+}
+
+.services-card__title {
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.services-card__text {
+    font-size: 14px;
+    line-height: 2;
+    max-width: 350px;
+}
+
+/* PORTFOLIO */
+
+#portfolio {
+    background: #f1f1f1;
+    text-align: center;
+}
+
+.portfolio__title {
+    padding-top: 90px;
+    margin-bottom: 70px;
+    text-align: center;
+    color: #070707;
+    font-size: 34px;
+    font-weight: 600;
+}
+
+.portfolio-wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio__link {
+    display: block;
+    margin: 40px 0 90px 0;
+    color: #070707;
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+.portfolio__link:hover {
+    color: #FFD645;
+}
+
+/* CONTACTS */
+
+#contacts {
+    padding: 90px 0;
+    text-align: center;
+}
+
+.contacts__title {
+    color: #070707;
+    font-size: 34px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.contacts__text {
+    margin: 0 auto;
+    max-width: 296px;
+    color: #070707;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+.contacts__btn {
+    padding: 8px 23px;
+    color: #FFF;
+    background: #070707;
+    text-align: center;
+    border-radius: 15% 15% 15% 15% / 50% 50% 50% 50%;
+    margin-bottom: 80px;
+    border: 1px solid #FFF;
+    transition: .4s;
+}
+
+.contacts__btn:hover {
+    color: #070707;
+    background: #FFF;
+    border: 1px solid #070707;
+}
+
+.contacts__icons {
+    margin: 0 auto;
+    display: flex;
+    column-gap: 62px;
+    max-width: 343px;
+    margin-bottom: 40px;
+}
+
+.contacts__icons__text {
+    color: #828282;
+    font-size: 14px;
+    font-weight: 400;
+}
