@@ -1,0 +1,194 @@
+@media (max-width: 787px) {
+
+   /* ================ experience ================ */
+   .experience {
+      padding: 49px 0px 40px 25px;
+   }
+
+   .experience__wrap {
+      gap: 25px;
+   }
+
+   .experience__text {
+      margin-bottom: 20px;
+   }
+
+   /* ================ services ================ */
+   .services {
+      margin-bottom: 60px;
+   }
+}
+
+@media (max-width: 578px) {
+   [class*=__container] {
+      padding-inline: 10px;
+   }
+
+   /* ================ header ================ */
+   .header-menu {
+      &__list {
+         gap: 20px;
+      }
+   }
+
+   /* ================ reputation ================ */
+   .reputation__wrap {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      gap: 24px;
+   }
+
+   /* ================ about us ================ */
+   .about {
+      padding-top: 0;
+      padding-bottom: 0;
+   }
+
+   .about__image {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   .about__img {
+      display: block;
+   }
+
+   .about__block {
+      width: 100%;
+      margin-inline: auto;
+      max-width: none;
+      position: static;
+      align-self: stretch;
+      transform: none;
+   }
+
+   .about__image {
+      width: 100%;
+      height: auto;
+   }
+
+   /* ================ services ================ */
+   .services__wrap {
+      gap: 40px;
+   }
+
+   /* ================ projects ================ */
+   .projects__wrap {
+      flex-direction: column;
+   }
+
+   .projects__list {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+   }
+
+   .gallery__cards {
+      grid-template-columns: 1fr;
+   }
+
+   .gallery__button {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-content: space-between;
+      gap: 5px;
+   }
+
+   .gallery__btn {
+      width: auto;
+   }
+
+   .gallery-btn__list {
+      gap: 5px;
+   }
+}
+
+@media (max-width: 479px) {
+
+
+   /* ================ header ================ */
+   .header-menu {
+      &__list {
+         gap: 10px;
+      }
+   }
+
+   /* ================ mission ================ */
+   .mission-block__btn:nth-child(1) {
+      text-align: right;
+      padding-right: 10px;
+   }
+
+   .mission-block__button button:nth-child(1)::before {
+      right: 4em;
+   }
+
+   .mission-block__btn:nth-child(2) {
+      text-align: left;
+      padding-left: 10px;
+   }
+
+   .mission-block__button button:nth-child(2)::after {
+      left: 4em;
+   }
+
+
+
+   /* ================ experience ================ */
+   .experience__wrap {
+      grid-template-columns: 1fr;
+      gap: 0;
+   }
+
+   .experience__content {
+      margin-top: 20px;
+      justify-self: center;
+      text-align: center;
+      margin-left: -25px;
+   }
+
+
+   .block4 {
+      margin-bottom: 0;
+   }
+
+   /* ================ projects ================ */
+   .projects {
+      padding-bottom: 50px;
+   }
+
+   .projects__list {
+      justify-content: start;
+      gap: 5px;
+   }
+
+   .projects__link {
+      font-size: 14px;
+   }
+
+   .gallery__cards {
+      margin-top: 30px;
+   }
+
+   /* ================ footer ================ */
+   .footer__wrap {
+      flex-direction: column;
+      align-items: flex-start;
+   }
+}
+
+@media (max-width: 400px) {
+
+   /* ================ header ================ */
+   .thebox {
+      display: none;
+   }
+
+   /* ================ services ================ */
+   .services__wrap {
+      grid-template-columns: 1fr 1fr;
+   }
+}
