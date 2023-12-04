@@ -1,0 +1,251 @@
+@import url(https://fonts.googleapis.com/css?family=Heebo:100,200,300,400,500,600,700,800,900);
+/* ================ RESET ================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: top;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+button {
+  cursor: pointer;
+  background: inherit;
+  border: none;
+}
+
+body {
+  font-family: "Heebo", Arial, Helvetica, sans-serif;
+  font-size: clamp(12px, 0.654rem + 0.48vw, 14px);
+  font-weight: 400;
+  color: #21243D;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+[class*=__container] {
+  max-width: 916px;
+  padding-inline: 15px;
+  margin-inline: auto;
+}
+
+.text {
+  font-size: clamp(12px, 0.654rem + 0.48vw, 14px);
+}
+
+.section-header__title {
+  font-size: 22px;
+}
+@media (max-width: 767.98px) {
+  .section-header__title {
+    text-align: center;
+    font-style: 18px;
+  }
+}
+
+/* ================ HEADER ================ */
+.header {
+  padding: 33px 60px 33px 0px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+.header__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 33px;
+}
+.header__item {
+  font-size: 20px;
+  font-weight: 500;
+  color: #000000;
+}
+.header__link:hover {
+  color: #FF6464;
+}
+.header__link-active {
+  color: #FF6464;
+}
+
+/* ================ WORKS ================ */
+.works {
+  padding: 15px 0px 83px 0px;
+}
+.works__wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.works__title {
+  font-size: clamp(32px, 1.712rem + 1.44vw, 44px);
+  font-weight: 700;
+  line-height: 136%;
+  margin-bottom: 55px;
+}
+
+.works-header__title {
+  margin-bottom: 22px;
+}
+
+.works-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding-bottom: 15px;
+  position: relative;
+}
+.works-item:after {
+  position: absolute;
+  bottom: 0;
+  content: "";
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #21243D;
+}
+.works-item__image {
+  border-radius: 6px;
+  flex: 0 0 250px;
+  position: relative;
+  min-height: 180px;
+}
+.works-item__img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  content: "";
+  object-fit: cover;
+}
+.works-item__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 17px;
+}
+.works-item__title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #21243D;
+}
+.works-item__title:hover {
+  color: #FF6464;
+}
+.works-item__row {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.works-item__date {
+  padding: 0px 10px;
+  background: #142850;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 900;
+  color: #FFFFFF;
+  border-radius: 16px;
+}
+.works-item__name {
+  font-size: 20px;
+  color: #8695A4;
+}
+.works-item__text {
+  font-size: 16px;
+  color: #21243D;
+}
+
+/* ================ FOOOOOOOOTER ================ */
+.footer {
+  padding: 50px 0px 50px 0px;
+}
+.footer__wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+}
+.footer__social {
+  display: flex;
+  gap: 35px;
+}
+.footer__image {
+  width: 30px;
+  height: 30px;
+  transition: all 0.4s;
+}
+.footer__image:hover {
+  transform: scale(150%);
+}
+.footer__img {
+  width: 100%;
+  height: 100%;
+}
+.footer__copyright {
+  font-size: 14px;
+  color: #21243D;
+}
+
+/* ================ MEDIA ================ */
+@media (max-width: 767.98px) {
+  /* ================ header ================ */
+  .header {
+    padding-inline: 0;
+    justify-content: center;
+  }
+}
+@media (max-width: 540px) {
+  [class*=__container] {
+    padding-inline: 25px;
+  }
+  /* ================ works ================ */
+  .works {
+    padding-bottom: 0;
+  }
+  .works-item {
+    flex-direction: column;
+  }
+  .works-item__image {
+    width: 100%;
+    padding: 25% 0px 35% 0px;
+    min-width: none;
+  }
+  .works-item__title {
+    font-size: 24px;
+  }
+  .works-item__row {
+    font-size: 16px;
+  }
+}
+
+/*# sourceMappingURL=works.css.map */

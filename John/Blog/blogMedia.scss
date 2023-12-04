@@ -1,0 +1,32 @@
+@media (max-width: 767.98px) {
+
+   /* ================ header ================ */
+   .header {
+      padding-inline: 0;
+      justify-content: center;
+   }
+
+   /* ================ blog ================ */
+   .blog {
+      padding-top: 25px;
+      padding-bottom: 0;
+   }
+
+   .blog-item__row {
+      font-size: 16px;
+   }
+
+   .blog-item__title {
+      font-size: 26px;
+   }
+
+   .blog-item__text {
+      font-size: 16px;
+   }
+}
+
+@media (max-width: 540px) {
+   [class*=__container] {
+      padding-inline: 25px;
+   }
+}

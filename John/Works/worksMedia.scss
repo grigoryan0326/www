@@ -1,0 +1,37 @@
+@media (max-width: 767.98px) {
+
+   /* ================ header ================ */
+   .header {
+      padding-inline: 0;
+      justify-content: center;
+   }
+}
+
+@media (max-width: 540px) {
+   [class*=__container] {
+      padding-inline: 25px;
+   }
+
+   /* ================ works ================ */
+   .works {
+      padding-bottom: 0;
+   }
+
+   .works-item {
+      flex-direction: column;
+   }
+
+   .works-item__image {
+      width: 100%;
+      padding: 25% 0px 35% 0px;
+      min-width: none;
+   }
+
+   .works-item__title {
+      font-size: 24px;
+   }
+
+   .works-item__row {
+      font-size: 16px;
+   }
+}
