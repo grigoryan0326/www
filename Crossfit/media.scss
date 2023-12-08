@@ -1,5 +1,11 @@
 /* ================ MEDIA ================ */
 
+@media (max-width: 1420px) {
+   .calculate__title {
+      margin-left: 40px;
+   }
+}
+
 @media (max-width: 1300px) {
    .training-types-list {
       margin-inline: 30px;
@@ -9,6 +15,47 @@
 
    .family-img {
       height: 300px;
+   }
+}
+
+@media (max-width: 1024px) {
+
+   /* ================ calculate ================ */
+   .calculate {
+      padding-block: 100px;
+   }
+
+   .calculate-form__body {
+      grid-template-columns: 1fr;
+   }
+
+   .input-wide {
+      grid-column: span 1;
+   }
+
+   .calculate-form__btn {
+      width: 100%;
+   }
+
+   .calculate__wrap {
+      gap: 20px;
+   }
+
+   .calculate-table :is(th, td) {
+      padding-block: 10px;
+   }
+
+   .calculate-table tfoot td {
+      padding-top: 15px;
+   }
+
+   /* ================ footer ================ */
+   .footer {
+      padding: 70px 0 40px 0;
+   }
+
+   .footer__wrap {
+      gap: 15px;
    }
 }
 
@@ -89,6 +136,35 @@
    .join-us-form-body {
       flex-direction: column;
       row-gap: 20px;
+   }
+
+   /* ================ calculate ================ */
+   .calculate {
+      padding-block: 50px;
+   }
+
+   .calculate__wrap {
+      flex-direction: column;
+      gap: 50px;
+   }
+
+   .calculate-table__wrapper:before {
+      display: none;
+   }
+
+   /* ================ footer ================ */
+   .footer-header {
+      margin-bottom: 30px;
+      gap: 30px;
+   }
+
+   .footer-header__text {
+      font-size: 16px;
+   }
+
+   .footer__wrap {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 30px;
    }
 }
 
@@ -175,5 +251,20 @@
 
    .family-img {
       height: 140px;
+   }
+
+   /* ================ footer ================ */
+   .footer-header {
+      flex-direction: column;
+      text-align: center;
+   }
+
+   .footer__wrap {
+      grid-template-columns: 1fr;
+      text-align: center;
+   }
+
+   .footer-column {
+      align-items: center;
    }
 }

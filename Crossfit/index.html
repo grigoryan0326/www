@@ -249,8 +249,156 @@
             <img src="img/family4.png" alt="" class="family-img">
             <img src="img/family1.jpg" alt="" class="family-img">
          </div>
-         <input type="radio" class="input">
       </section>
+      <!-- ================ CALCULATE ================ -->
+      <section class="calculate">
+         <div class="calculate__container container">
+            <div class="calculate__wrap">
+               <div class="calculate-body">
+                  <h2 class="section-title calculate__title" data-title="BMI">
+                     Input your bmi
+                  </h2>
+                  <div class="calculate__description section-subtitle">
+                     <p>
+                        Duo graece ponderum ne, ei mel aliquando. Pro te tamquam nonumes, nam no nemore epicurei
+                     </p>
+                  </div>
+                  <form class="calculate-form">
+                     <div class="calculate-form__body">
+                        <input type="number" class="calculate-form__input input" placeholder="Height / cm">
+                        <input type="number" class="calculate-form__input input" placeholder="Weight / kg">
+                        <input type="number" class="calculate-form__input input" placeholder="Age">
+                        <select class="calculate-form__input input" required>
+                           <option value="male">Male</option>
+                           <option value="female">Female</option>
+                           <option value="" disabled selected>Gender</option>
+                        </select>
+                        <select class="calculate-form__input input input-wide" required>
+                           <option value="1">1</option>
+                           <option value="2">2</option>
+                           <option value="" disabled selected>Select an activity factor:</option>
+                        </select>
+                     </div>
+                     <button class="calculate-form__btn button transparent" type="submit">
+                        Calculate
+                     </button>
+                  </form>
+               </div>
+               <div class="calculate-table__wrapper">
+                  <table class="calculate-table">
+                     <thead>
+                        <tr>
+                           <th>BMI</th>
+                           <th>Weight status</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>Below 18.5</td>
+                           <td>Underweight</td>
+                        </tr>
+                        <tr>
+                           <td>18.5 - 24.9</td>
+                           <td>Healthy</td>
+                        </tr>
+                        <tr>
+                           <td>25.0 - 29.9</td>
+                           <td>Overweight</td>
+                        </tr>
+                        <tr>
+                           <td>30.0 - and Above</td>
+                           <td>Obese</td>
+                        </tr>
+                     </tbody>
+                     <tfoot>
+                        <tr>
+                           <td colspan="2">
+                              <b>BMR</b> Metabolic Rate / <b>BMI</b> Body Mass Index
+                           </td>
+                        </tr>
+                     </tfoot>
+                  </table>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- ================ FOOOOOOOTER ================ -->
+      <footer class="footer">
+         <div class="footer__container container">
+            <div class="footer-header">
+               <a href="#" class="footer-header__logo">
+                  <img src="img/logo.png" alt="Logo" class="footer-header__img">
+               </a>
+               <p class="footer-header__text">
+                  please feel free to send us an e-mail at kropp@qodeinteractive.com For any additional inquiries
+               </p>
+            </div>
+            <div class="footer__wrap">
+               <div class="footer-column">
+                  <h2 class="footer-column__title">
+                     About
+                  </h2>
+                  <p class="footer-column__text">
+                     Shape up your site with Kropp, a theme especially made for fitness & gym websites.
+                  </p>
+               </div>
+               <div class="footer-column">
+                  <h2 class="footer-column__title">
+                     Working hours
+                  </h2>
+                  <p class="footer-column__text">
+                     Monday - Friday <br>
+                     05:30 - 24:00
+                     <span>
+                        Weekdays <br>
+                        00:00 - 24:00
+                     </span>
+                  </p>
+               </div>
+               <div class="footer-column">
+                  <h2 class="footer-column__title">
+                     Location
+                  </h2>
+                  <a href="#" class="footer-column__link">
+                     68 Jay Street, Brooklyn, <br>
+                     NY 11201, United States
+                  </a>
+                  <div class="footer-column-link-wrap">
+                     <a href="mailto:kropp@qodeinteractive.com"
+                        class="footer-column__link">kropp@qodeinteractive.com</a>
+                     <a href="callto:+ (1) 718 - 407 - 6400" class="footer-column__link">+ (1) 718 - 407 - 6400</a>
+                  </div>
+               </div>
+               <div class="footer-column">
+                  <h2 class="footer-column__title start-now__title">
+                     start now
+                  </h2>
+                  <form class="footer-column__form">
+                     <input type="email" class="footer-column__input" placeholder="Email">
+                     <button class="footer-column__btn" type="submit">
+                     </button>
+                  </form>
+                  <div class="footer-column__social">
+                     <a href="#" class="footer-social">
+                        <img src="img/tiktok.svg" alt="Tiktok" class="footer-social__img">
+                     </a>
+                     <a href="#" class="footer-social">
+                        <img src="img/youtube.svg" alt="YouTube" class="footer-social__img">
+                     </a>
+                     <a href="#" class="footer-social">
+                        <img src="img/instagram.svg" alt="Instagram" class="footer-social__img">
+                     </a>
+                     <a href="#" class="footer-social">
+                        <img src="img/facebook.svg" alt="Facebook" class="footer-social__img">
+                     </a>
+                     <a href="#" class="footer-social">
+                        <img src="img/twitter.svg" alt="Twitter" class="footer-social__img">
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
    </main>
 </body>
 
