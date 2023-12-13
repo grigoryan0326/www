@@ -1,0 +1,95 @@
+// ================ FONTS ================ 
+
+@import url(https://fonts.googleapis.com/css?family=Heebo:100,200,300,400,500,600,700,800,900);
+
+
+// ================ VARIABLES ================ 
+
+$fontFamily: 'Heebo', Arial, Helvetica, sans-serif;
+$minWidth: 320px;
+$maxWidth: 1152px;
+$maxWidthContainer: 886px;
+$mq1: $maxWidthContainer + 12px;
+$mq2: 991.98px;
+$mq3: 767.98px;
+$mq4: 479.98px;
+$colorPrimary: #FF6464;
+$colorSecondary: #00A8CC;
+$colorDark: #21243D;
+$colorLight: #8695A4;
+$colorWhite: #FFFFFF;
+$colorBlack: #000000;
+$fs16: clamp(12px, 0.654rem + 0.48vw, 14px);
+$fs26: clamp(20px, 1.106rem + 0.72vw, 26px);
+$fs30: clamp(24px, 1.356rem + 0.72vw, 30px);
+$fs44: clamp(32px, 1.712rem + 1.44vw, 44px);
+
+/* ================ RESET ================ */
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+*::before,
+*::after {
+   padding: 0;
+   margin: 0;
+   border: 0;
+   box-sizing: border-box;
+}
+
+img {
+   vertical-align: top;
+   max-width: 100%;
+}
+
+a {
+   text-decoration: none;
+   font: inherit;
+   color: inherit;
+   cursor: pointer;
+   transition: 0.4s;
+}
+
+ul li {
+   list-style-type: none;
+}
+
+button {
+   cursor: pointer;
+   background: inherit;
+   border: none;
+}
+
+body {
+   font-family: $fontFamily;
+   font-size: clamp(12px, 0.654rem + 0.48vw, 14px);
+   font-weight: 400;
+   color: $colorDark;
+}
+
+.wrapper {
+   width: 100%;
+   min-height: 100%;
+   overflow: hidden;
+}
+
+[class*=__container] {
+   max-width: $maxWidthContainer + 30px;
+   padding-inline: 15px;
+   margin-inline: auto;
+}
+
+.text{
+   font-size: $fs16;
+}
+
+.section-header__title{
+   font-size: 22px;
+   @media (max-width: $mq3){
+      text-align: center;
+      font-style: 18px;
+   }
+}

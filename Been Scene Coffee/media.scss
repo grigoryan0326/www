@@ -1,0 +1,25 @@
+@media (max-width: 475px) {
+   .title {
+      font-size: 34px;
+      line-height: 120%;
+   }
+}
+
+@media (max-width: 700px) {
+   .feedback__container {
+      padding: 0 50px;
+   }
+}
+
+@media (max-width: 997px) {
+   .contact-us {
+
+      &__adress,
+      &__email,
+      &__site,
+      &__tel,
+      &__title {
+         color: #FFF;
+      }
+   }
+}

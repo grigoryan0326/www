@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* font-family: 'Poppins', sans-serif; */
+
+/* 992px 768px 576px 375px */
+
+@media (max-width: 992px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    #header {
+        padding: 25px 0 120px 0;
+    }
+
+    .header__title {
+        font-size: 40px;
+        line-height: 52px;
+    }
+
+    .main-wrap__item {
+        padding: 0;
+        min-height: auto;
+    }
+
+    .main-wrap {
+        flex-wrap: wrap;
+        row-gap: 50px;
+    }
+
+    .main__item__title br {
+        display: none;
+    }
+
+    .get-started {
+        padding: 35px;
+        bottom: -84px;
+    }
+
+    .get-started__title {
+        font-size: 30px;
+    }
+
+    #main {
+        padding-top: 70px;
+    }
+
+    .footer-contacts {
+        padding-top: 210px;
+    }
+
+    .footer-content-wrap {
+        column-gap: 40px;
+        justify-content: space-between;
+    }
+
+    .footer-content__hr {
+        display: none;
+    }
+
+    .footer__list__link,
+    .footer__list__link {
+        font-size: 14px;
+    }
+
+    .footer-content__right__link {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    #main {
+        min-height: 900px;
+    }
+
+    .main__title {
+        max-width: 550px;
+    }
+
+    .main-wrap {
+        flex-wrap: wrap;
+        row-gap: 30px;
+    }
+
+    .main-wrap__item {
+        min-height: 220px;
+    }
+
+    .get-started {
+        bottom: -121px;
+    }
+}
+
+@media (max-width: 576px) {
+    #main {
+        min-height: 940px;
+    }
+
+    .main__title {
+        max-width: 335px;
+    }
+
+    .main-wrap__item {
+        max-width: 155px;
+    }
+
+    .get-started {
+        padding: 0;
+        max-height: auto;
+    }
+
+    .get-started__title {
+        line-height: normal;
+        bottom: 0;
+        padding: 14px;
+    }
+}
+
+@media (max-width: 375px) {
+    .header__logo__img {
+        max-width: 95px;
+        max-height: 17px;
+    }
+
+    .header-logo__link::before {
+        max-width: 27px;
+        max-height: 17px;
+    }
+}

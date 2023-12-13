@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font: 600 15px 'Jost', sans-serif;
+    background: #020204;
+    color: #FFF;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+    font: inherit;
+    background: inherit;
+}
+a:hover{
+    color: #C7A17A;
+}
+hr{
+    background-color: #32323D;
+    height: 1px;
+    border: none;
+}
+ul li{
+    list-style-type: none;
+    color: inherit;
+    background: inherit;
+    font: inherit;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.btn__primary{
+    padding: 17px 60px;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border: 1px solid #666681;
+    border-radius: 10px;
+    background-color: transparent;
+    color: inherit;
+    cursor: pointer;
+}
+.btn__primary:hover{
+    background-color: #fff;
+    color: #020204;
+}
+.btn__secondary{
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 17px 60px;
+    border: 1px solid #666681;
+    border-radius: 10px;
+    background-color: transparent;
+    color: inherit;
+}
+.btn__secondary:hover{
+    background-color: #FFF;
+    color: #020204;
+}
+
+/* HEADER */
+
+.header-wrap-top{
+    padding: 5px 0;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.header-lang-en{
+    color: #C7A17A;
+    padding: 0 0 0 10px;
+}
+.header-tel{
+    float: right;
+}
+.header-wrap{
+    display: flex;
+    /* justify-content: space-between; */
+    padding: 18px 0;
+    align-items: center;
+}
+.header__list{
+    display: flex;
+    justify-content: space-between;
+    gap: 35px;
+}
+.header__link__home{
+    color: #C7A17A;
+    cursor: default;
+}
+.header__logo{
+    justify-self: flex-start;
+    margin-left: 224px;
+}
+.header__icons{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-left: auto;
+}
+.cart{
+    position: relative;
+}
+.cart::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -5px;
+    width: 6px;
+    height: 6px;
+    background: url(/Coffee_Shop/img/Ellipse_in_cart.svg) 50% 50%/cover no-repeat;
+    color: #C7A17A;
+}
+
+/* BEST-CHOICE */
+
+.best-choice-wrap{
+    width: 100%;
+    background: url(/Coffee_Shop/img/roasted_coffee_best_choice.jpg) 50% 25%/contain no-repeat;
+    height: 620px;
+    background-color: rgba(2, 2, 4, 0.55);
+    background-blend-mode: multiply;
+}
+.best-choice__title{
+    font-size: 60px;
+    font-weight: 900;
+    line-height: 144%;
+    text-transform: uppercase;
+    width: 570px;
+    padding: 150px 0 35px 0;
+}
+.best-choice__text{
+    font-size: 18px;
+    font-weight: 400;
+    color: #DFDFDF;
+    padding-bottom: 35px;
+    width: 570px;
+}
+.best-choice__btn{
+    display: flex;
+    gap: 20px;
+}
+
+/* BANNER */
+
+.banner-wrap{
+    display: flex;
+    margin-bottom: 122px;
+}
+.banner__img{
+    width: 600px;
+    height: 378px;
+}
+.roasted-coffee__img{
+    width: 100%;
+    height: 100%;
+    filter: brightness(50%);
+}
+.banner__info{
+    background-color: #14141D;
+    border-radius: 0 10px 10px 0;
+}
+.banner__title{
+    font-size: 24px;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: 30px 0 15px 30px;
+}
+.banner__text{
+    font-size: 18px;
+    font-weight: 400;
+    color: #DFDFDF;
+    width: 500px;
+    padding-left: 30px;
+    padding-bottom: 42px;
+    padding-right: 73px;
+}
+
+/* CATALOG */
+
+.section__title{
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 144%;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+.catalog-wrap{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 21px;
+}
+.catalog-wrap__item{
+    width: 386px;
+    height: 372px;
+    border-radius: 10px;
+    background: #14141D;
+}
+.catalog-wrap__item img{
+    padding-top: 20px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 42px;
+}
+.catalog__item__name{
+    font-size: 24px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    margin-left: 20px;
+}
+.catalog__price{
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-left: 20px;
+    display: inline-block;
+}
+.catalog__price__dark{
+    color: #818181;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-left: 30px;
+}
+.fav-icon{
+    display: inline;
+    float: right;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.fav-icon:hover{
+    color: #C7A17A;
+}
+.catalog-wrap__item:hover{
+    background-color: #22222F;
+        transform: scale(110%);
+}
+.catalog__link:hover{
+    color: inherit;
+}
+
+/* NEWS */
+
+.news__title{
+    margin: 100px 0 40px 0;
+}
+.news-wrap{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.news-wrap__item{
+    background: #14141D;
+    margin-bottom: 80px;
+    border-radius: 10px;
+}
+.news__info__title{
+    margin: 20px 0 20px 20px;
+    font-size: 24px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.news__info__text{
+    margin: 0 20px 20px 20px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #DFDFDF;
+}
+
+/* FOOTER */
+
+.footer-wrap{
+    display: flex;
+}
+.footer-logo__title{
+    color: #C7A17A;
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    position: relative;
+    margin-top: 105px;
+    padding-left: 60px;
+    margin-right: 228px;
+}
+.footer-logo__title:after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 58px;
+    height: 79px;
+    background: url(/Coffee_Shop/img/logo.png) ;
+    transform: translateY(-25%);
+}
+.footer__nav{
+    margin: 80px 0;
+    display: flex;
+    gap: 328px;
+}
+.footer__item{
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.footer__nav .footer__item:last-child{
+    margin-bottom: 0;
+}

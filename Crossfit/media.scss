@@ -1,0 +1,270 @@
+/* ================ MEDIA ================ */
+
+@media (max-width: 1420px) {
+   .calculate__title {
+      margin-left: 40px;
+   }
+}
+
+@media (max-width: 1300px) {
+   .training-types-list {
+      margin-inline: 30px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+   }
+
+   .family-img {
+      height: 300px;
+   }
+}
+
+@media (max-width: 1024px) {
+
+   /* ================ calculate ================ */
+   .calculate {
+      padding-block: 100px;
+   }
+
+   .calculate-form__body {
+      grid-template-columns: 1fr;
+   }
+
+   .input-wide {
+      grid-column: span 1;
+   }
+
+   .calculate-form__btn {
+      width: 100%;
+   }
+
+   .calculate__wrap {
+      gap: 20px;
+   }
+
+   .calculate-table :is(th, td) {
+      padding-block: 10px;
+   }
+
+   .calculate-table tfoot td {
+      padding-top: 15px;
+   }
+
+   /* ================ footer ================ */
+   .footer {
+      padding: 70px 0 40px 0;
+   }
+
+   .footer__wrap {
+      gap: 15px;
+   }
+}
+
+@media (max-width: 862px) {
+
+   // HEADER
+   .header {
+      flex-wrap: wrap;
+      row-gap: 10px;
+      padding-inline: 15px;
+      padding-top: 15px;
+   }
+
+   .header-menu {
+      flex-basis: 100%;
+      order: 1;
+   }
+
+   .header-menu-link {
+      padding-block: 15px;
+   }
+
+   // BANNER
+   .banner {
+      padding-inline: 15px;
+      row-gap: 20px;
+   }
+
+   .banner-info {
+      margin-bottom: 5px;
+   }
+
+   .banner-info::before {
+      margin-right: 15px;
+   }
+
+   .motivation-card-image {
+      max-width: 40%;
+      height: auto;
+      margin-block: -25px;
+   }
+
+   .motivation-card-body {
+      padding-block: 50px;
+   }
+
+   .family {
+      padding-top: 72px;
+   }
+
+   .family-img {
+      height: 240px;
+   }
+}
+
+@media (max-width: 797.98px) {
+   .motivation-card-body {
+      flex: 0 1 45%;
+   }
+
+   .training-types-list {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+   }
+
+   .join-us-title {
+      margin-bottom: 80px;
+   }
+
+   .join-us-body {
+      padding-bottom: 80px;
+   }
+
+   .join-us-video-play-button {
+      width: 140px;
+   }
+
+   .join-us-form-body {
+      flex-direction: column;
+      row-gap: 20px;
+   }
+
+   /* ================ calculate ================ */
+   .calculate {
+      padding-block: 50px;
+   }
+
+   .calculate__wrap {
+      flex-direction: column;
+      gap: 50px;
+   }
+
+   .calculate-table__wrapper:before {
+      display: none;
+   }
+
+   /* ================ footer ================ */
+   .footer-header {
+      margin-bottom: 30px;
+      gap: 30px;
+   }
+
+   .footer-header__text {
+      font-size: 16px;
+   }
+
+   .footer__wrap {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 30px;
+   }
+}
+
+@media (max-width: 666px) {
+   .find-us {
+      margin-top: 50px;
+      flex-direction: column-reverse;
+      row-gap: 50px;
+   }
+
+   .find-us-map {
+      width: 70%;
+      align-self: center;
+   }
+
+   .family-img {
+      height: 200px;
+   }
+}
+
+@media (max-width: 555px) {
+
+   // HEADER
+   .header-menu-link {
+      padding-right: 0;
+   }
+
+   .header-menu-link:hover::after {
+      display: none;
+   }
+
+   // MOTIVATION
+   .motivation-card {
+      flex-direction: column-reverse;
+   }
+
+   .motivation-card-image {
+      max-width: 70%;
+   }
+
+   .motivation-card-body {
+      margin-top: 60px;
+   }
+
+   .motivation-item:nth-child(even) .motivation-card {
+      flex-direction: column-reverse;
+   }
+}
+
+@media (max-width: 468.98px) {
+   .header-menu-list {
+      column-gap: 20px;
+      justify-content: space-between;
+   }
+
+   .header-actions {
+      column-gap: 20px;
+   }
+
+   .button {
+      padding-inline: 15px;
+   }
+
+   .training-types-list {
+      margin-inline: 5px;
+      gap: 5px;
+   }
+
+   .join-us-title {
+      margin-bottom: 40px;
+   }
+
+   .join-us-body {
+      padding-bottom: 40px;
+   }
+
+   .join-us-subtitle {
+      font-size: 14px;
+   }
+
+   .join-us-video-play-button {
+      width: 100px;
+   }
+
+   .family-img {
+      height: 140px;
+   }
+
+   /* ================ footer ================ */
+   .footer-header {
+      flex-direction: column;
+      text-align: center;
+   }
+
+   .footer__wrap {
+      grid-template-columns: 1fr;
+      text-align: center;
+   }
+
+   .footer-column {
+      align-items: center;
+   }
+}

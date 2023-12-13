@@ -1,0 +1,460 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #FFF;
+    background-color: #000;
+    font: 16px/28px 'Be Vietnam Pro', Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+button {
+    display: block;
+    border: none;
+    background-color: transparent;
+    font: inherit;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.btn-primary {
+    padding: 12px 24px;
+    background-color: #EE8313;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: #c64006;
+}
+
+.btn-secondary {
+    padding: 12px 24px;
+    font-weight: 600;
+    color: #EE8313;
+    border: 1px solid #EE8313;
+    line-height: 26px;
+}
+
+.title-section {
+    font-size: 52px;
+    line-height: 64px;
+    text-align: center;
+    letter-spacing: 0.6px;
+    margin-bottom: 40px;
+}
+
+/* HEADER */
+
+#header-section {
+    padding: 40px 0 107px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+}
+
+.header-logo__img {
+    height: 48px;
+    width: 48px;
+}
+
+.nav-main {
+    margin-left: auto;
+}
+
+.nav-main__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 48px;
+    margin-right: 72px;
+}
+
+.nav-main__link:hover {
+    color: #EE8313;
+}
+
+/* BANNER */
+
+#banner-section {
+    padding-bottom: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner {
+    max-width: 475px;
+    padding-top: 40px;
+}
+
+.banner__header {
+    font-size: 52px;
+    line-height: 64px;
+    letter-spacing: 0.312px;
+    font-weight: 700;
+}
+
+.banner_text {
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: -0.408px;
+    opacity: 0.8;
+    margin-top: 32px;
+    margin-bottom: 48px;
+}
+
+.banner-links-wrap {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    margin-bottom: 40px;
+}
+
+.banner-feautures__text {
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.16px;
+}
+
+.banner-feautures__text:first-child {
+    margin-right: 40px;
+}
+
+.banner-feautures__text__strong {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 52px;
+    letter-spacing: -0.164px;
+    margin-right: 16px;
+    vertical-align: sub;
+}
+
+.banner__img {
+    position: absolute;
+    width: 60%;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+
+.banner__img::before {
+    position: absolute;
+    content: "";
+    width: 96%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: url(/Cars/img/mustang.png) no-repeat;
+    z-index: 1;
+}
+
+.banner__img::after {
+    position: absolute;
+    content: "";
+    width: 96%;
+    height: 100%;
+    top: 0;
+    right: -22%;
+    background: rgba(52, 52, 52, 0.30);
+}
+
+/* RENT */
+
+#rent-section {
+    padding: 120px 0px;
+}
+
+.rent-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+.rent:nth-child(1) {
+    position: relative;
+    height: 524px;
+    background: url(/Cars/img/rent1.jpg) 50%/cover no-repeat;
+}
+
+.rent:nth-child(2) {
+    position: relative;
+    height: 524px;
+    background: url(/Cars/img/rent2.jpg) 50%/cover no-repeat;
+}
+
+.rent:nth-child(3) {
+    position: relative;
+    height: 524px;
+    background: url(/Cars/img/rent3.jpg) 50%/cover no-repeat;
+}
+
+.rent:nth-child(4) {
+    position: relative;
+    height: 524px;
+    background: url(/Cars/img/rent4.jpg) 50%/cover no-repeat;
+}
+
+.rent__name {
+    position: absolute;
+    top: 48px;
+    left: 48px;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 52px;
+}
+
+.rent__link {
+    position: absolute;
+    bottom: 48px;
+    right: 48px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+    padding-right: 30px;
+}
+
+.rent__link:hover {
+    color: #FFCC2C;
+}
+
+.rent__link::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    right: 0;
+    width: 8px;
+    height: 32px;
+    background: url(/Cars/img/arrow.svg) 50%/cover no-repeat;
+    transform: translateY(-50%);
+    font-weight: 500;
+}
+
+/* SERVICES */
+
+#services-section {
+    padding-bottom: 120px;
+}
+
+.services-section__title {
+    text-align: start;
+    font-style: 52px;
+    font-weight: 700;
+    margin-bottom: 66px;
+}
+
+.services-wrap {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.services {
+    width: 384px;
+}
+
+.services__title {
+    font-style: 24px;
+    font-weight: 700;
+    margin: 24px 0 16px 0;
+}
+
+.services__text {
+    font-style: 16px;
+    font-weight: 400;
+    opacity: .8;
+}
+
+/* DESTINATION */
+
+#destination-section {
+    padding-bottom: 162px;
+}
+
+.destination-wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.destination {
+    background-color: #131313;
+    border: 1px solid #171717;
+}
+
+.destination-info {
+    padding: 24px;
+}
+
+.destination__title {
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.destination__text {
+    margin: 10px 0 25px;
+    opacity: 0.8;
+}
+
+.destination__price {
+    font-weight: 600;
+    margin-bottom: 17px;
+    display: block;
+    position: relative;
+    padding-left: 42px;
+}
+
+.destination__price::before {
+    position: absolute;
+    left: 0;
+    content: "";
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    transform: translateY(-50%);
+    background: url(/Cars/img/Front\ Car.svg) no-repeat;
+}
+
+.destination__link {
+    color: #EE8313;
+}
+
+.destination__link:hover {
+    color: #c64006;
+}
+
+/* LOCATION */
+
+#location {
+    padding-bottom: 102px;
+}
+
+/* FOOTER */
+
+#footer-section {
+    padding-top: 40px;
+    background-color: #1F1905;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 65px;
+}
+
+.footer-logo-wrap {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    margin-bottom: 64px;
+    font-weight: 600;
+}
+
+.footer-about__img {
+    width: 48px;
+    height: 48px;
+}
+
+.footer-about__title {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.16px;
+}
+
+.footer-about__text {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    /* 177.778% */
+    width: 235px;
+}
+
+.footer-nav-wrap {
+    display: flex;
+    gap: 45px;
+    justify-content: space-between;
+    margin: 40px 100px 0 auto;
+}
+
+.footer-nav-header {
+    margin-bottom: 32px;
+    font-style: 18ex;
+    line-height: 20px;
+}
+
+.footer-nav__item {
+    font-style: 28px;
+    line-height: 20px;
+    margin-bottom: 28px;
+    opacity: .8;
+}
+
+.footer-nav__link:hover {
+    color: #EE8313;
+}
+
+.footer-social {
+    margin-top: 32px;
+}
+
+.footer-social__link:nth-child(1) {
+    display: block;
+    width: 120px;
+    height: 30px;
+    margin-bottom: 45px;
+    background: url(/Cars/img/social_1.svg) 50%/cover no-repeat;
+}
+
+.footer-social__link:nth-child(2) {
+    display: block;
+    width: 120px;
+    height: 35px;
+    margin-bottom: 45px;
+    background: url(/Cars/img/social_2.svg) 50%/cover no-repeat;
+}
+
+.footer-social__link:nth-child(3) {
+    display: block;
+    width: 120px;
+    height: 30px;
+    background: url(/Cars/img/social_3.svg) 50%/cover no-repeat;
+}
+
+.footer-copyright {
+    background-color: #EE8313;
+    padding: 20px 0;
+}
+
+.footer-copyright__text {
+    text-align: center;
+}
