@@ -1,0 +1,254 @@
+@media (max-width: 1085px) {
+
+  /* ================ choose ================ */
+  .choose__wrap {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+
+  /* ================ contact ================ */
+  .contact__title {
+    color: var(--color--text);
+    max-width: none;
+    position: relative;
+    z-index: 5;
+  }
+
+  .contact__wrap {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+
+  /* ================ space ================ */
+  .space__wrap {
+    flex-direction: column-reverse;
+    margin-left: 0;
+    padding-inline: 15px;
+    padding-right: 0;
+    row-gap: 35px;
+  }
+
+  /* ================ start ================ */
+  .start-button {
+    gap: 10px;
+  }
+
+  .btn-primary,
+  .btn__secondary {
+    padding-inline: 10px;
+  }
+}
+
+@media (max-width: 991px) {
+
+  /* ================ hero ================ */
+  .hero__wrap {
+    justify-content: space-between;
+  }
+
+  .hero-content {
+    flex: 0 0 50%;
+  }
+
+  .hero__title {
+    font-size: clamp(1.5rem, 0.904rem + 2.98vw, 2.75rem);
+  }
+
+  .hero__image {
+    flex: 0 1 50%;
+  }
+}
+
+@media (max-width: 801px) {
+
+  /* ================ header ================ */
+  .header-logo__text {
+    font-size: 18px;
+  }
+
+  .header-nav {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .burger span {
+    display: block;
+  }
+
+  /* ================ start ================ */
+  .start__wrap {
+    gap: 50px;
+  }
+
+  /* ================ feedback ================ */
+  .feedback__wrap {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* ================ contact ================ */
+  .contact__title {
+    font-size: 30px;
+  }
+
+  /* ================ footer ================ */
+  .footer__wrap {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .footer-nav+.footer-nav {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 705px) {
+  .hero__wrap {
+    position: relative;
+    padding-bottom: 100px;
+
+    &::after {
+      display: block;
+    }
+  }
+
+  .hero__image {
+    display: none;
+  }
+
+  .hero__title,
+  .hero__subtitle {
+    max-width: none;
+  }
+
+  .hero-content {
+    flex-basis: 100%;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  /* ================ choose ================ */
+  .choose__wrap {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  /* ================ feedback ================ */
+  .feedback {
+    padding-block: 30px;
+  }
+
+  .feedback-title__wrap {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .feedback__wrap {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  /* ================ contact ================ */
+  .contact {
+    margin-top: 30px;
+  }
+
+  .contact__wrap {
+    flex-direction: column;
+  }
+
+  .contact-content {
+    padding-bottom: 0;
+  }
+
+  .contact__subtitle {
+    color: var(--color--text);
+  }
+}
+
+@media (max-width: 550px) {
+
+  /* ================ space ================ */
+  .space-images {
+    flex-direction: column;
+  }
+
+  /* ================ start ================ */
+  .start__wrap {
+    flex-direction: column;
+    gap: 25px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .start-button {
+    justify-content: space-between;
+  }
+
+  .start-image {
+    margin: 0;
+  }
+
+  .start-image::before {
+    display: none;
+  }
+
+  .start-content {
+    padding: 10px;
+  }
+
+  /* ================ serve ================ */
+  .serve__wrap {
+    flex-direction: column;
+  }
+
+  .serve-card {
+    flex-basis: auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero__form:after {
+    display: block;
+  }
+
+  .hero__form::before {
+    display: none;
+  }
+
+  .hero__input {
+    padding-left: 15px;
+  }
+
+  /* ================ footer ================ */
+  .footer__wrap {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .footer-social {
+    text-align: center;
+  }
+
+  .footer-logo {
+    justify-content: center;
+  }
+
+  .footer-social-item {
+    justify-content: center;
+  }
+  
+  
+  .footer-social__text {
+    margin-bottom: 20px;
+    padding-inline: 5px;
+  }
+}
