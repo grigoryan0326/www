@@ -1,0 +1,170 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  font: inherit;
+  transition: 0.5s;
+  color: inherit;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  color: inherit;
+}
+
+.wrapper {
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+[class*=__container] {
+  max-width: 1406px;
+  padding-inline: 15px;
+  margin-inline: auto;
+
+  @media (max-width: 1406px) {
+    max-width: none;
+  }
+}
+
+.logo {
+  max-width: 88px;
+
+  &:hover {
+    color: #5243C2;
+  }
+}
+
+.logo-text {
+  position: relative;
+  padding-right: 16px;
+
+  &::after {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 0;
+    right: 0px;
+    content: "";
+    background: url(../img/logo.svg) center no-repeat;
+  }
+}
+
+.btn-primary {
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 133%;
+  border-radius: var(--border--radius);
+  background: #7B61FF;
+
+  &:hover {
+    background: #5243C2;
+  }
+}
+
+.search-btn {
+  padding: 18px;
+  background: #7B61FF;
+  border-radius: var(--border--radius);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background: #5243C2;
+  }
+
+  &__icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url(../img/search.svg) center;
+    background-repeat: no-repeat;
+  }
+}
+
+.section {
+  &__title {
+    font-size: 32px;
+    font-weight: 600;
+
+    @media (max-width: 767.98px) {
+      font-size: 28px;
+    }
+  }
+}
+
+.section-content {
+
+  &__link {
+    color: #5243C2;
+    font-weight: 400;
+    padding: 10px;
+    padding-right: 34px;
+    position: relative;
+    display: block;
+    background: #F6F4FF;
+    border-radius: var(--border--radius);
+    white-space: nowrap;
+
+    &:hover {
+      background: #cac8d3;
+    }
+
+    &::after {
+      display: block;
+      position: absolute;
+      content: "";
+      width: 20px;
+      height: 20px;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      background: url(../img/aroow-right-blue.svg) no-repeat;
+    }
+  }
+}
+
+.section-title {
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+}
