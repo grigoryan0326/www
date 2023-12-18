@@ -1,0 +1,273 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  font: inherit;
+  transition: 0.5s;
+  color: inherit;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  color: inherit;
+}
+
+.wrapper {
+  overflow: hidden;
+  max-width: 100vw;
+  border-left: 5px solid #6C63FF;
+  border-right: 5px solid #6C63FF;
+  min-height: 100vh;
+}
+
+[class*=container] {
+  max-width: 1160px;
+  padding-inline: 10px;
+  margin-inline: auto;
+}
+
+body {
+  background: #fff;
+  color: #2F2E41;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 137.5%;
+  letter-spacing: -0.32px;
+}
+
+/* ================ BODY ================ */
+
+.header {
+  padding-block: 17px;
+  background: #6C63FF;
+}
+
+.header__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 200px;
+  height: 46px;
+}
+
+.logo__image {
+  width: 100%;
+  height: 100%;
+}
+
+.header__btn {
+  padding: 11px 37px;
+  border-radius: 5px;
+  border: 2px solid #FFF;
+  color: #fff;
+  font-weight: 500;
+  background: transparent;
+  text-transform: uppercase;
+}
+
+.header__btn:hover {
+  background: #FFF;
+  color: #6C63FF;
+  border: 2px solid #6C63FF;
+}
+
+/* ================ MAIN ================ */
+
+/* ================ CONTENT ================ */
+
+.content {
+  padding-block: 100px 146px;
+}
+
+.content__title {
+  font-size: 44px;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-bottom: 70px;
+  text-align: center;
+}
+
+.content__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.content-card {
+  flex-grow: 1;
+  align-self: stretch;
+  padding-block: 46px;
+  border-radius: 5px;
+  border: 2px solid #E7E7E7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-card__title {
+  max-width: 277px;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -.44px;
+  line-height: normal;
+}
+
+.content-card__image {
+  max-width: 262px;
+  margin-bottom: 36px;
+}
+
+.content-card__text {
+  padding-inline: 20px;
+}
+
+.content-card__text b {
+  font-weight: 700;
+}
+
+/* ================ FOOTER ================ */
+
+.footer {
+  padding-block: 29px;
+  background: #6C63FF;
+  color: #FFF;
+}
+
+.footer__list {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 113px;
+}
+
+.footer__link {
+  display: flex;
+  align-items: center;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.footer__link:hover {
+  transform: scale(1.2);
+}
+
+.icon {
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
+}
+
+.home-icon {
+  background: url(../img/home-icon.svg) no-repeat;
+  background-position: center;
+}
+
+.computer-icon {
+  background: url(../img/computer-icon.svg) no-repeat;
+  background-position: center;
+}
+
+.sandbox-icon {
+  background: url(../img/sandbox-icon.svg) no-repeat;
+  background-position: center;
+}
+
+.map-icon {
+  background: url(../img/map-pointer-icon.svg) no-repeat;
+  background-position: center;
+}
+
+/* ================ MEDIA ================ */
+
+@media (max-width: 768px) {
+
+  /* ================ main ================ */
+  .content {
+    padding-block: 46px 50px;
+  }
+
+  .content__title {
+    margin-bottom: 46px;
+    font-size: 36px;
+  }
+
+  .content__wrap {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .content-card {
+    flex-basis: 48%;
+  }
+
+  .content__wrap:last-child .content__title {
+    max-width: unset;
+  }
+
+  /* ================ footer ================ */
+  .footer__list {
+    padding-inline: 15px;
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 768px) {
+
+  /* ================ header ================ */
+  .logo {
+    max-width: 160px;
+  }
+
+  /* ================ main ================ */
+  .content__title {
+    font-size: 28px;
+    margin-bottom: 36px;
+  }
+
+  /* ================ footer ================ */
+  .footer__list {
+    flex-wrap: wrap;
+    row-gap: 38px;
+  }
+
+  .footer__item {
+    flex-basis: 50%;
+  }
+}
