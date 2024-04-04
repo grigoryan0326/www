@@ -1,0 +1,1 @@
+Here I created image slider, using 'Vanilla JavaScript'

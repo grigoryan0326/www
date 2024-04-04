@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  font: inherit;
+  transition: 0.5s;
+  color: inherit;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  color: inherit;
+}
+
+/* ================ BODY ================ */
+
+body {
+  font-family: "Rubik Scribble", system-ui;
+  color: yellow;
+  background: rgb(30, 28, 28);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header {
+  background: rgb(0, 0, 0);
+  width: 100%;
+}
+
+.header__title {
+  font-size: 50px;
+  padding: 10px;
+  text-align: center;
+}
+
+.slider {
+  margin-top: 20px;
+  width: 500px;
+  height: 600px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  cursor: pointer;
+  position: relative;
+  border-radius: 10px;
+}
+
+.slider-controlers {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+button {
+  font-weight: 700;
+  color: black;
+  background: yellow;
+  padding: 5px;
+  width: 150px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: black;
+  color: yellow;
+}
+
+.hidden {
+  display: none;
+}
