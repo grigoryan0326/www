@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
+body {
+  font-family: "Tilt Neon", sans-serif;
+  background: rgb(110, 219, 0);
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  user-select: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  font: inherit;
+  transition: 0.5s;
+  color: inherit;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  color: inherit;
+}
+
+/* ================ BODY ================ */
+
+.container {
+  background: chartreuse;
+  padding: 2rem 7rem;
+  border-radius: 14px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  width: fit-content;
+}
+
+.container.start .user-result {
+  animation: userShake .7s ease infinite;
+}
+
+@keyframes userShake {
+  50% {
+    transform: rotate(20deg);
+  }
+}
+
+.container.start .cpu-result {
+  animation: cpuShake .7s ease infinite;
+}
+
+@keyframes cpuShake {
+  50% {
+    transform: rotate(-20deg);
+  }
+}
+
+.container.start .option-images {
+  pointer-events: none;
+}
+
+.result-images {
+  display: flex;
+  column-gap: 7rem;
+  justify-content: center;
+}
+
+.result-images img {
+  width: 100px;
+}
+
+.user-result img {
+  transform: rotate(90deg);
+}
+
+.cpu-result img {
+  transform: rotate(-90deg) rotateY(180deg);
+}
+
+.result {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #7D2AE8;
+  margin-top: 1.5rem;
+}
+
+.option-images {
+  display: flex;
+  justify-content: center;
+  column-gap: 70px;
+  margin-top: 50px;
+}
+
+.option-image {
+  opacity: .5;
+  transition: opacity .3s ease;
+}
+
+.option-image img {
+  width: 60px;
+  pointer-events: none;
+}
+
+.option-image:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.option-image.active {
+  opacity: 1;
+}
+
+.option-image p {
+  text-align: center;
+  margin-top: 5px;
+  color: #7D2AE8;
+  font-weight: 700;
+  font-size: 1.25rem;
+  pointer-events: none;
+}
