@@ -1,0 +1,1 @@
+Here I created a Classic Snake game using JavaScript.
