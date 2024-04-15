@@ -1,0 +1,1 @@
+Here is classic Alarm app, that was created by me using Vanilla JavaScript.
