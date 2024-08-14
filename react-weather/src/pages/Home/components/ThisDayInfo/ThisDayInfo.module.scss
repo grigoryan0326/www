@@ -6,7 +6,7 @@
   max-width: 750px;
   width: 100%;
   height: 300px;
-  background: $dark-background;
+  background: var(#{--components-background-default});
   box-shadow: $box-shadow;
   border-radius: $border-radius;
   overflow: hidden;
@@ -24,12 +24,16 @@
   .indicator,
   .indicator__name {
     margin-bottom: 0;
-    color: $gray-color;
+    color: $base-color;
   }
 
   .indicator__name,
   .indicator__value {
     font-size: 14px;
+  }
+
+  .indicator__value {
+    color: var(#{--text-color-default});
   }
 
   .indicator {

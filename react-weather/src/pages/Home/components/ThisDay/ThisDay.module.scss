@@ -5,7 +5,7 @@
   max-width: 400px;
   width: 100%;
   height: 300px;
-  background: $dark-background;
+  background: var(#{--components-background-default});
   border-radius: 20px;
   box-shadow: $box-shadow;
 }
@@ -28,12 +28,12 @@
 
 .this__day_day {
   font-size: 40px;
-  color: white;
+  color: var(#{--text-color-default});
 }
 
 .bottom__block {
   font-size: 25px;
-  color: $gray-color;
+  color: $base-color;
   display: flex;
   flex-direction: column;
   gap: 14px;
