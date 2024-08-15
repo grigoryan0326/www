@@ -13,6 +13,7 @@ export class Items extends Component {
               item={item}
               key={item.id}
               onAdd={this.props.onAdd}
+              onShowItem={this.props.onShowItem}
             />
           )
         })}

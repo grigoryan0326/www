@@ -7,7 +7,10 @@ export class Item extends Component {
 
     return (
       <div className={s.item}>
-        <div className={s.imgWrapper}>
+        <div
+          className={s.imgWrapper}
+          onClick={() => this.props.onShowItem(this.props.item)}
+        >
           {img && (
             <img
               className={s.itemImg}

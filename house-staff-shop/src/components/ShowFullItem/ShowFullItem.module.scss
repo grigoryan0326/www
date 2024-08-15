@@ -1,35 +1,42 @@
+.fullItem {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.525);
+  z-index: 1000;
+  overflow: auto;
+}
+
 .item {
   position: relative;
-  padding-bottom: 40px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   text-align: center;
-  width: 30%;
-  min-width: 300px;
-  background: #eedecf;
-  border-radius: 10px 10px 0 0;
+  width: 600px;
+  height: 600px;
+  margin: 5% auto;
+  background: #fff;
+  border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
   transition: all 0.4s ease;
-  &:hover {
-    transform: scale(1.1);
-    .itemDesc {
-      text-overflow: clip;
-      white-space: normal;
-    }
-    .itemInfo {
-      gap: 0px;
-    }
-  }
 }
 
 .imgWrapper {
-  height: 100%;
+  max-height: 80%;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .itemImg {
   aspect-ratio: 1;
-  height: 100%;
+  max-height: 100%;
 }
 
 .itemInfo {
@@ -41,9 +48,6 @@
   .itemTitle,
   .itemDesc {
     color: #333;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
 
   .itemPrice {

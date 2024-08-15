@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import { MdDelete } from "react-icons/md"
 import s from "./Order.module.scss"
 
 export class Order extends Component {
@@ -13,6 +14,10 @@ export class Order extends Component {
         />
         <h2 className={s.orderTitle}>{title}</h2>
         <b className={s.orderPrice}>{price}$</b>
+        <MdDelete
+          className={s.delete}
+          onClick={() => this.props.onDelete(this.props.order)}
+        />
       </div>
     )
   }

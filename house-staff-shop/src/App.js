@@ -2,6 +2,8 @@ import React from "react"
 import Header from "./components/Header/Header"
 import Footer from "./components/Footer/Footer"
 import Items from "./components/Items/Items"
+import ShowFullItem from "./components/ShowFullItem/ShowFullItem"
+import Categories from "./components/Categories/Categories"
 import "./App.scss"
 
 class App extends React.Component {
@@ -9,6 +11,9 @@ class App extends React.Component {
     super(props)
     this.state = {
       orders: [],
+      currentItems: [],
+      showFullItem: false,
+      fullItem: {},
       items: [
         {
           id: 1,
@@ -172,21 +177,53 @@ class App extends React.Component {
         },
       ],
     }
+    this.state.currentItems = this.state.items
+    this.chooseCategory = this.chooseCategory.bind(this)
     this.addToOrder = this.addToOrder.bind(this)
+    this.deleteFromOrder = this.deleteFromOrder.bind(this)
+    this.onShowItem = this.onShowItem.bind(this)
   }
   render() {
     return (
       <div className='App'>
         <div className='wrapper'>
-          <Header orders={this.state.orders} />
-          <Items
-            items={this.state.items}
-            onAdd={this.addToOrder}
+          <Header
+            orders={this.state.orders}
+            onDelete={this.deleteFromOrder}
           />
+          <Categories chooseCategory={this.chooseCategory} />
+          <Items
+            items={this.state.currentItems}
+            onAdd={this.addToOrder}
+            onShowItem={this.onShowItem}
+          />
+          {this.state.showFullItem && (
+            <ShowFullItem
+              item={this.state.fullItem}
+              onAdd={this.addToOrder}
+              onShowItem={this.onShowItem}
+            />
+          )}
           <Footer />
         </div>
       </div>
     )
+  }
+
+  onShowItem(item) {
+    this.setState({ fullItem: item })
+    this.setState({ showFullItem: !this.state.showFullItem })
+  }
+
+  chooseCategory(category) {
+    if (category === "all") {
+      this.setState({ currentItems: this.state.items })
+      return
+    }
+
+    this.setState({
+      currentItems: this.state.items.filter((el) => el.category === category),
+    })
   }
 
   addToOrder(item) {
@@ -197,6 +234,15 @@ class App extends React.Component {
       }
     })
     if (!isInArray) this.setState({ orders: [...this.state.orders, item] })
+  }
+
+  deleteFromOrder(item) {
+    console.log("called")
+    this.setState({
+      orders: this.state.orders.filter((order) => {
+        return order.id !== item.id
+      }),
+    })
   }
 }
 

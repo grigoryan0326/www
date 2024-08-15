@@ -10,4 +10,7 @@ body {
 .wrapper {
   max-width: 1280px;
   margin: 50px auto;
+  @media (max-width: 1300px) {
+    padding-inline: 10px;
+  }
 }
