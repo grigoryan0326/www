@@ -1,12 +1,47 @@
-.headerWrapper{
+.headerWrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  .shopCard {
+    font-size: 25px;
+    cursor: pointer;
+    color: #333;
+    transition: all 0.4s ease;
+    position: relative;
+    z-index: 10;
+
+    &:hover {
+      transform: scale(1.4);
+      color: #ca5252;
+    }
+  }
+}
+
+.shopCardWrapper{
+  position: relative;
+}
+
+.shopCardOpened{
+  position: absolute;
+  width: 450px;
+  border-radius: 40px;
+  top: 0;
+  right: 0;
+  content: "";
+  z-index: 5;
+  background: goldenrod;
+  box-shadow: 5px 5px 15px 3px rgba(0,0,0,0.75);
+}
+
+.active {
+  transform: scale(1.4);
+  color: #ca5252;
 }
 
 .logo {
-font-weight: 700;
-font-size: 25px;
+  font-weight: 700;
+  font-size: 25px;
 }
 
 .presentation {
@@ -16,7 +51,7 @@ font-size: 25px;
   background-repeat: no-repeat;
   background-position: 80% 80%;
   background-blend-mode: multiply;
-  background-color: rgba($color: #FFF, $alpha: .5);
+  background-color: rgba($color: #fff, $alpha: 0.5);
   width: 100%;
   height: 600px;
   position: relative;
@@ -57,4 +92,9 @@ font-size: 25px;
       color: #fff;
     }
   }
+}
+
+.empty{
+  padding: 20px;
+  color: #ca5252;
 }
