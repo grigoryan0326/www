@@ -1,0 +1,60 @@
+.headerWrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+font-weight: 700;
+font-size: 25px;
+}
+
+.presentation {
+  margin: 50px 0;
+  background: url("../../assets/img/furniture-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 80% 80%;
+  background-blend-mode: multiply;
+  background-color: rgba($color: #FFF, $alpha: .5);
+  width: 100%;
+  height: 600px;
+  position: relative;
+
+  &::after {
+    content: "Best staff for your house!";
+    position: absolute;
+    width: 300px;
+    top: 100px;
+    left: 50px;
+    font-size: 40px;
+    font-weight: 600;
+    color: #daa520;
+  }
+
+  &::before {
+    content: "At low prices...";
+    position: absolute;
+    width: 300px;
+    top: 200px;
+    left: 50px;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    color: goldenrod;
+  }
+}
+
+.nav {
+  float: right;
+  display: flex;
+  gap: 20px;
+
+  li {
+    cursor: pointer;
+    transition: color 0.4s ease;
+    &:hover {
+      color: #fff;
+    }
+  }
+}
