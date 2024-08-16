@@ -1,0 +1,20 @@
+@import '../../styles//variables';
+
+.brands{
+  display: flex;
+  justify-content: center;
+  padding-block: 60px;
+  background: $color-gold;
+  margin-bottom: 120px;
+
+  .brandsList{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 120px;
+
+    & img{
+      mix-blend-mode: multiply;
+    }
+  }
+}

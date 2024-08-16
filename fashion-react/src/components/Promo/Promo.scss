@@ -1,0 +1,97 @@
+@import '../../styles/variables';
+
+.promoWrapper {
+  background: #f4f6f5;
+  border-radius: 59px;
+  padding: 68px 80px 0 120px;
+  margin-bottom: 60px;
+
+  .promoContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .promoText {
+      max-width: 606px;
+    }
+
+    .promoTitle {
+      font-size: 96px;
+      line-height: 1.2;
+      font-weight: 900;
+      max-width: 474px;
+      margin-bottom: 40px;
+  
+      .highlight{
+        position: relative;
+        & span{
+          position: relative;
+        }
+      }
+      .highlight::before{
+        position: absolute;
+        width: 464px;
+        height: 112px;
+        top: 0px;
+        left: -38px;
+        right: -60px;
+        content: "";
+        background-color: $color-white;
+        transform: rotate(-2deg);
+      }
+      .highlight-yellow{
+        position: relative;
+        display: inline-block;
+        & span{
+          position: relative;
+        }
+      }
+
+      .highlight-yellow::before{
+        position: absolute;
+        width: 464px;
+        height: 112px;
+        top: 0px;
+        left: -38px;
+        right: -60px;
+        content: "";
+        background-color: $color-gold;
+        transform: rotate(-2deg);
+      }
+    }
+
+    .promoSubText {
+      font-size: 32px;
+      letter-spacing: -0.05em;
+      font-weight: 400;
+      line-height: 48px;
+      margin-bottom: 32px;
+    }
+
+    .promoBtnWrapper{
+      display: flex;
+      gap: 34px;
+      align-items: center;
+      margin-bottom: 90px;
+      & img{
+        max-width: 190px;
+      }
+
+      .promoBtn{
+        font-size: 30px;
+        padding: 20px 40px;
+        color: $color-white;
+        background: $color-black;
+        border-radius: 10px;
+        transition: all .4s ease;
+        &:hover{
+          background: $color-gold;
+        }
+      }
+    }
+
+    .promoImg {
+      max-width: 890px;
+    }
+  }
+}

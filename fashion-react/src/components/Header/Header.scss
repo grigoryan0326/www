@@ -1,0 +1,51 @@
+@import "../../styles/variables";
+
+.headerWrapper {
+  padding-block: 50px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 13px;
+  }
+
+  .logo h1 {
+    font-size: 40px;
+    letter-spacing: 3%;
+    font-weight: 900;
+  }
+
+  .navList {
+    display: flex;
+    align-items: center;
+    gap: 65px;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 1%;
+  }
+
+  .navListItem {
+    cursor: pointer;
+    padding: 13px 0;
+    transition: color 0.4s ease;
+    &:hover {
+      color: $color-gold;
+    }
+  }
+
+  .navListItem.signUp {
+    border-radius: 7px;
+    color: #fefefe;
+    background: $color-black;
+    padding: 13px 22px;
+    transition: all .4s ease;
+    &:hover{
+      background: $color-gold;
+    }
+  }
+}
