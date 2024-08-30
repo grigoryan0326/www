@@ -1,0 +1,95 @@
+.example-1 {
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+}
+.example-1 .icon-content {
+  margin: 0 10px;
+  position: relative;
+  @media (max-width: 1100px) {
+    margin: 0 5px;
+  }
+}
+.example-1 .icon-content .tooltip {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 15px;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+.example-1 .icon-content:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  top: -50px;
+}
+.example-1 .icon-content a {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 20%;
+  color: var(--text-color-base);
+  background-color: var(--text-color-primary);
+  transition: all 0.3s ease-in-out;
+  @media (max-width: 1100px) {
+    height: 40px;
+    width: 40px;
+  }
+}
+.example-1 .icon-content a:hover {
+  box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 50%);
+}
+.example-1 .icon-content a svg {
+  position: relative;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+}
+.example-1 .icon-content a:hover {
+  color: white;
+}
+.example-1 .icon-content a .filled {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #000;
+  transition: all 0.3s ease-in-out;
+}
+.example-1 .icon-content a:hover .filled {
+  height: 100%;
+}
+.example-1 .icon-content a[data-social="instagram"] .filled,
+.example-1 .icon-content a[data-social="instagram"] ~ .tooltip {
+  background: linear-gradient(
+    45deg,
+    #f09433,
+    #e6683c,
+    #dc2743,
+    #cc2366,
+    #bc1888
+  );
+}
+.example-1 .icon-content a[data-social="threads"] .filled,
+.example-1 .icon-content a[data-social="threads"] ~ .tooltip {
+  background-color: #000000;
+}
+.example-1 .icon-content a[data-social="facebook"] .filled,
+.example-1 .icon-content a[data-social="facebook"] ~ .tooltip {
+  background-color: #1877f2;
+}
+.example-1 .icon-content a[data-social="telegram"] .filled,
+.example-1 .icon-content a[data-social="telegram"] ~ .tooltip {
+  background-color: #0088cc;
+}

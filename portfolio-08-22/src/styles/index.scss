@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  font: inherit;
+  transition: 0.5s;
+  color: inherit;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  color: inherit;
+}
+
+body {
+  font-family: "Platypi", serif;
+  font-size: 24px;
+}
+
+/* ================ stth ================ */
+
+:root {
+  --background-color-light-home: #3277d2;
+  --background-color-light-about: #3a8ce0;
+  --background-color-light-contacts: #42a2e6;
+  --background-color-light-works: #4ab8ec;
+
+  --background-color-dark-home: rgb(5, 5, 33);
+  --background-color-dark-about: rgb(7, 7, 46);
+  --background-color-dark-contacts: rgb(9, 9, 59);
+  --background-color-dark-works: rgb(11, 11, 72);
+
+  --text-color-primary-dark: rgb(101, 90, 106);
+  --text-color-secondary-dark: rgb(35, 35, 229);
+  --text-color-base-dark: rgb(192, 185, 214);
+
+  --text-color-primary-light: #f0f0f0;
+  --text-color-secondary-light: #ffd700;
+  --text-color-base-light: #333333;
+}
+
+[data-theme="light"] {
+  --background-color-home: var(--background-color-light-home);
+  --background-color-about: var(--background-color-light-about);
+  --background-color-contacts: var(--background-color-light-contacts);
+  --background-color-works: var(--background-color-light-works);
+
+  --text-color-primary: var(--text-color-primary-light);
+  --text-color-secondary: var(--text-color-secondary-light);
+  --text-color-base: var(--text-color-base-light);
+}
+
+[data-theme="dark"] {
+  --background-color-home: var(--background-color-dark-home);
+  --background-color-about: var(--background-color-dark-about);
+  --background-color-contacts: var(--background-color-dark-contacts);
+  --background-color-works: var(--background-color-dark-works);
+
+  --text-color-primary: var(--text-color-primary-dark);
+  --text-color-secondary: var(--text-color-secondary-dark);
+  --text-color-base: var(--text-color-base-dark);
+}
+
+body {
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+  height: 100%;
+  position: relative;
+}
+
+html{
+  scroll-behavior: smooth;
+}

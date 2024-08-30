@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+.logoWrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.logoItems {
+  display: flex;
+  gap: 10px;
+}
+
+.logoItem {
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  font-variant: normal;
+  font-family: "Anonymous Pro", monospace;
+  font-weight: 700;
+  color: var(--text-color-primary);
+  font-style: italic;
+  cursor: default;
+
+  .itemText {
+    transition: all .5s ease-in;
+  }
+}
+
+@keyframes textShadow {
+  0% {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  50% {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+  }
+
+  100% {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+  }
+}
+
+.logoItem span {
+  color: var(--text-color-base);
+  opacity: 0.2;
+  transition: all 0.5s ease-in;
+  transition: opacity 0.5s ease-in;
+  [data-theme="light"] & {
+    color: black;
+  }
+}
+
+.logoItemSvg svg {
+  color: var(--text-color-base);
+  opacity: 0.2;
+  width: 20px;
+  height: 20px;
+  transition: all 0.5s ease-in;
+  transition: opacity 0.5s ease-in;
+  [data-theme="light"] & {
+    color: black;
+  }
+}
+
+.logoItemSvg svg path {
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+.logoItem:hover {
+  opacity: 1;
+  color: blue;
+  animation: textShadow 0.4 ease-in infinite;
+}
+.logoItem:hover span {
+  opacity: 1;
+  color: red;
+}
+.logoItem:hover .logoItemSvg svg {
+  opacity: 1;
+  color: red;
+}
