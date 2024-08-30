@@ -1,5 +1,5 @@
 import PageBackgroundManager from '../../utils/PageBackgroundManager'
-import work1 from '../../assets/gif/Recording2024-08-30160614-ezgif.com-optimize.gif'
+import twoRism from '../../assets/gif/2rism.gif'
 import './Works.scss'
 
 const Portfolio = () => {
@@ -8,7 +8,7 @@ const Portfolio = () => {
       <PageBackgroundManager page='works' />
       <h2>Portfolio</h2>
       <p>See my work.</p>
-      <img src={work1} alt="2rism" />
+      <img src={twoRism} alt="2rism" className='gif'/>
     </section>
   )
 }
