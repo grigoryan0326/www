@@ -1,4 +1,5 @@
 import PageBackgroundManager from '../../utils/PageBackgroundManager'
+import WorksSlider from '../../UI/WorksSlider/WorksSlider'
 import twoRism from '../../assets/gif/2rism.gif'
 import './Works.scss'
 
@@ -8,7 +9,7 @@ const Portfolio = () => {
       <PageBackgroundManager page='works' />
       <h2>Portfolio</h2>
       <p>See my work.</p>
-      <img src={twoRism} alt="2rism" className='gif'/>
+      <WorksSlider />
     </section>
   )
 }

@@ -1,7 +1,7 @@
 import { TypeAnimation } from "react-type-animation"
 import s from "./Home.module.scss"
 // import StarField from "../StarField/StarField"
-import bgImage from "../../assets/img/homeBg.jpg"
+import bgImage from "../../assets/img/home-bg.webp"
 import HireMe from "../../UI/HireMeBtn/HireMe"
 import PageBackgroundManager from "../../utils/PageBackgroundManager"
 
