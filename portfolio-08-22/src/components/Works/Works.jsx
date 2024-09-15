@@ -1,6 +1,5 @@
 import PageBackgroundManager from '../../utils/PageBackgroundManager'
 import WorksSlider from '../../UI/WorksSlider/WorksSlider'
-import twoRism from '../../assets/gif/2rism.gif'
 import './Works.scss'
 
 const Portfolio = () => {

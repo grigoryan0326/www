@@ -1,99 +1,97 @@
-import { Navigation, Pagination, A11y, EffectCards } from "swiper/modules"
-import { Swiper, SwiperSlide } from "swiper/react"
+// import { Swiper, SwiperSlide } from "swiper/react"
+// import {
+//   Pagination,
+//   Navigation,
+//   EffectFade,
+//   Autoplay,
+//   EffectFlip,
+//   EffectCards,
+//   Mousewheel,
+// } from "swiper/modules"
+// import "swiper/scss"
+// import "swiper/scss/navigation"
+// import "swiper/scss/pagination"
+// import "swiper/scss/effect-fade"
 
-import "swiper/scss"
-import "swiper/scss/navigation"
-import "swiper/scss/pagination"
-import "./WorksSlider.scss"
+// import Works from "../../utils/WorksSlideData"
+// import "./WorksSlider.scss"
 
-import work1 from "../../assets/gif/2rism.webp"
-import work2 from "../../assets/gif/brownian-motion.gif"
-import work3 from "../../assets/gif/countdown-timer.gif"
-import work4 from "../../assets/gif/cutspace.gif"
-import work5 from "../../assets/gif/file-downloader.gif"
-import work6 from "../../assets/gif/house-staff.gif"
-import work7 from "../../assets/gif/piano-game.gif"
-import work8 from "../../assets/gif/rock-paper-scissors.gif"
-import work9 from "../../assets/gif/snake-game.gif"
-import work10 from "../../assets/gif/todo-vanillaJs.gif"
+// export default function App() {
+//   return (
+//     <>
+//       {/* <Swiper
+//         pagination={{ clickable: true, dynamicBullets: true }}
+//         mousewheel={true}
+//         effect={"flip"}
+//         grabCursor={true}
+//         modules={[EffectFlip, Pagination, Mousewheel]}
+//         className='mySwiper'
+//       > */}
+//       <Swiper
+//         modules={[Pagination, Navigation, EffectFade, Autoplay, Mousewheel]}
+//         spaceBetween={30}
+//         slidesPerView={1}
+//         effect='fade'
+//         mousewheel
+//         loop
+//         pagination={{ clickable: true, dynamicBullets: true }}
+//         // autoplay={{ delay: 5000, disableOnInteraction: true }}
+//       >
+//         {Works.map((work) => (
+//           <SwiperSlide key={work.id}>
+//             <img
+//               className='swiper-img'
+//               src={work.src}
+//               alt={work.name}
+//             />
+//             <div className='swiper-slide-content'>
+//               <h3 className='swiper-title'>{work.name}</h3>
+//               <p className='swiper-desc'>{work.description}</p>
+//             </div>
+//           </SwiperSlide>
+//         ))}
+//       </Swiper>
+//     </>
+//   )
+// }
 
-const WorksSlider = () => {
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import {
+  Pagination,
+  Navigation,
+  EffectFade,
+  Autoplay,
+  Mousewheel,
+} from "swiper/modules";
+import "swiper/scss";
+import "swiper/scss/navigation";
+import "swiper/scss/pagination";
+import "swiper/scss/effect-fade";
+
+import Works from "../../utils/WorksSlideData";
+import "./WorksSlider.scss";
+
+export default function WorksSlider() {
   return (
     <Swiper
-    modules={[Navigation, Pagination, A11y, EffectCards]}
-    effect={'cards'}
-    centerInsufficientSlides={true}
-    centeredSlides={true}
-    // // effect="cube"
-    spaceBetween={50}
-    // slidesPerView={3}
-    navigation
-    pagination={{ clickable: true }}
-    // onSwiper={(swiper) => console.log(swiper)}
-    // onSlideChange={() => console.log("slide change")}
+      modules={[Pagination, Navigation, EffectFade, Autoplay, Mousewheel]}
+      spaceBetween={30}
+      slidesPerView={1}
+      effect="fade"
+      mousewheel
+      loop
+      pagination={{ clickable: true, dynamicBullets: true }}
     >
-      <SwiperSlide>
-        <img
-          src={work1}
-          alt='2rism'
-        />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img
-          src={work2}
-          alt='2rism'
-        />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img
-          src={work3}
-          alt='2rism'
-        />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img
-          src={work4}
-          alt='2rism'
-        />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img
-          src={work5}
-          alt='2rism'
-        />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img
-          src={work6}
-          alt='2rism'
-        />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img
-          src={work7}
-          alt='2rism'
-        />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img
-          src={work8}
-          alt='2rism'
-        />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img
-          src={work9}
-          alt='2rism'
-        />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img
-          src={work10}
-          alt='2rism'
-        />
-      </SwiperSlide>
+      {Works.map((work) => (
+        <SwiperSlide key={work.id}>
+          <img className="swiper-img" src={work.src} alt={work.name} />
+          <div className="swiper-slide-content">
+            <h3 className="swiper-title">{work.name}</h3>
+            <p className="swiper-desc">{work.description}</p>
+          </div>
+        </SwiperSlide>
+      ))}
     </Swiper>
-  )
+  );
 }
-
-export default WorksSlider
