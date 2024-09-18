@@ -1,3 +1,52 @@
-.portfolio{
-  padding: 50px;
+.works {
+  margin-bottom: 50px;
+  padding: 20px 20px 0 20px;
+  .worksInfo {
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    .worksInfoTitle {
+      font-size: clamp(3rem, 2.423rem + 2.56vw, 5.5rem);
+      color: var(--text-color-secondary);
+    }
+    .worksInfoText {
+      color: var(--text-color-primary);
+      font-size: clamp(1.5rem, 1.269rem + 0.9vw, 2.5rem);
+    }
+  }
+  .worksQuote {
+    font-size: clamp(1.5rem, 1rem + 0.51vw, 2rem);
+    color: var(--text-color-primary);
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  .worksQuoteAuthor {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    .worksQuoteAuthorText {
+      font-size: clamp(1.5rem, 1rem + 0.51vw, 2rem);
+      color: var(--text-color-secondary);
+    }
+    .worksQuoteImg {
+      height: 50px;
+      animation: movingY 5s infinite;
+    }
+  }
+}
+
+@keyframes movingY {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }

@@ -106,17 +106,12 @@
   .swiper-slide-active .swiper-slide-content {
     opacity: 1;
   }
-  
-    .swiper-pagination-bullets {
-      opacity: 0.8;
-    }
+
+  .swiper-pagination-bullets {
+    opacity: 0.8;
+  }
 
   .swiper-pagination {
-    // position: absolute;
-    bottom: 35px !important; /* Располагаем точки внизу */
-    // width: 100%;
-    // z-index: 15; /* Делаем их выше контента */
-    // display: flex;
-    // justify-content: center;
+    bottom: 35px;
   }
 }

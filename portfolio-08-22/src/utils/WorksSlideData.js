@@ -1,22 +1,23 @@
 import { v4 as uuid } from "uuid"
 
-import tworism from "../assets/gif/2rism.webp"
-import brownianMotion from "../assets/gif/brownian-motion.gif"
-import countdownTimer from "../assets/gif/countdown-timer.gif"
-import cutspace from "../assets/gif/cutspace.gif"
-import fileDownloader from "../assets/gif/file-downloader.gif"
-import houseStaff from "../assets/gif/house-staff.gif"
-import pianoGame from "../assets/gif/piano-game.gif"
-import rockPaperScissors from "../assets/gif/rock-paper-scissors.gif"
-import snakeGame from "../assets/gif/snake-game.gif"
-import toDo from "../assets/gif/todo-vanillaJs.gif"
+import tworism from "../assets/worksSlide/2rism.webp"
+import brownianMotion from "../assets/worksSlide/brownian-motion.webp"
+import countdownTimer from "../assets/worksSlide/countdown-timer.webp"
+import cutspace from "../assets/worksSlide/cut-space.webp"
+import fileDownloader from "../assets/worksSlide/file-downloader.webp"
+import houseStaff from "../assets/worksSlide/house-staff.webp"
+import pianoGame from "../assets/worksSlide/piano-game.webp"
+import rockPaperScissors from "../assets/worksSlide/rock-paper-scissors.webp"
+import snakeGame from "../assets/worksSlide/snake-game.webp"
+import toDo from "../assets/worksSlide/todo-vanillaJs.webp"
 
 const Works = [
   {
     name: "2rism",
     id: uuid(),
     src: tworism,
-    description: "Here is a simple landing-page with some animations, written in HTML/CSS",
+    description:
+      "Here is a simple landing-page with some animations, written in HTML/CSS",
   },
   {
     name: "Brownian Motion",
@@ -64,7 +65,7 @@ const Works = [
     name: "Snake Game",
     id: uuid(),
     src: snakeGame,
-    description: "Smth about this project",
+    description: "Webp testing version",
   },
   {
     name: "ToDo",
