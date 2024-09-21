@@ -1,6 +1,8 @@
 .works {
   margin-bottom: 50px;
-  padding: 20px 20px 0 20px;
+  @media (max-width: 1025px) {
+    padding: 20px 20px 0px 20px;
+  }
   .worksInfo {
     margin-bottom: 50px;
     display: flex;
