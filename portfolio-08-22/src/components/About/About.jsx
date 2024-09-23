@@ -9,34 +9,79 @@ import "./About.scss"
 import TakeATourBtn from "../../UI/TakeATourBtn/TakeATourBtn"
 
 const About = () => {
+  // useEffect(() => {
+  //   const options = {
+  //     threshold: 0.5,
+  //   }
+
+  //   const rightCallback = (entries) =>
+  //     entries.forEach((entry, i) => {
+  //       if (entry.isIntersecting) {
+  //         entry.target.classList.add("scrolledFromRight")
+  //       }
+  //     })
+  //   const leftCallback = (entries) =>
+  //     entries.forEach((entry) => {
+  //       if (entry.isIntersecting) {
+  //         entry.target.classList.add("scrolledFromLeft")
+  //       }
+  //     })
+
+  //   const opacityCallback = (entries) =>
+  //     entries.forEach((entry) => {
+  //       if (entry.isIntersecting) {
+  //         entry.target.classList.add("opacity")
+  //       }
+  //     })
+
+  //   const leftObserver = new IntersectionObserver(leftCallback, options)
+  //   const rightObserver = new IntersectionObserver(rightCallback, options)
+  //   const opacityObserver = new IntersectionObserver(opacityCallback, options)
+
+  //   document.querySelectorAll(".left").forEach((item) => {
+  //     leftObserver.observe(item)
+  //     opacityObserver.observe(item)
+  //   })
+
+  //   document.querySelectorAll(".right").forEach((item) => {
+  //     rightObserver.observe(item)
+  //     opacityObserver.observe(item)
+  //   })
+  // }, [])
+
   useEffect(() => {
     const options = {
       threshold: 0.5,
     }
 
-    const rightCallback = (entries) =>
+    const callback = (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("scrolledFromRight")
+          // Убираем класс opacity, если элемент в зоне видимости
+          entry.target.classList.remove("opacity")
+
+          if (entry.target.classList.contains("left")) {
+            entry.target.classList.add("scrolledFromLeft")
+          } else if (entry.target.classList.contains("right")) {
+            entry.target.classList.add("scrolledFromRight")
+          }
+        } else {
+          // Добавляем класс opacity, если элемент вышел за пределы видимости
+          entry.target.classList.add("opacity")
         }
       })
-    const leftCallback = (entries) =>
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("scrolledFromLeft")
-        }
-      })
+    }
 
-    const leftObserver = new IntersectionObserver(leftCallback, options)
-    const rightObserver = new IntersectionObserver(rightCallback, options)
+    const observer = new IntersectionObserver(callback, options)
 
-    document.querySelectorAll(".left").forEach((item) => {
-      leftObserver.observe(item)
-    })
+    // Используем единый запрос для элементов с классами "left" и "right"
+    const items = document.querySelectorAll(".left, .right")
+    items.forEach((item) => observer.observe(item))
 
-    document.querySelectorAll(".right").forEach((item) => {
-      rightObserver.observe(item)
-    })
+    return () => {
+      // Очищаем наблюдатели при размонтировании компонента
+      items.forEach((item) => observer.unobserve(item))
+    }
   }, [])
 
   return (
@@ -45,14 +90,14 @@ const About = () => {
       <div className='aboutTitleWrapper'>
         <h1 className='aboutTitle'>Who I am?</h1>
         <p className='aboutTitleText'>
-          I’m a dedicated 24-year-old student from 
+          I’m a dedicated 24-year-old student from
           <a
             href='https://en.wikipedia.org/wiki/Armenia'
-            target="_blank"
-            rel="noreferrer"
+            target='_blank'
+            rel='noreferrer'
             className='aboutTitleCountry'
           >
-          <span> Armenia </span>
+            <span> Armenia </span>
           </a>
           with a strong passion for web development, eager to kickstart my
           professional journey as a frontend developer. My foundation in HTML,

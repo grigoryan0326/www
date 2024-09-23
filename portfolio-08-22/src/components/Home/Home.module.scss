@@ -9,9 +9,9 @@
   gap: 30px;
   max-height: 100vh;
   margin-bottom: 20px;
-    @media (max-width: 920px) {
-      width: 100%;
-    }
+  @media (max-width: 920px) {
+    width: 100%;
+  }
 }
 
 .rightContent,
@@ -47,8 +47,9 @@
   text-shadow: 2px 2px 4px rgba(231, 222, 222, 0.15);
   line-height: 1;
   user-select: none;
+  animation: leftContent 1s ease-in-out forwards;
   @media (max-width: 920px) {
-    [data-theme="dark"] & { 
+    [data-theme="dark"] & {
       -webkit-text-stroke-color: #133231;
     }
   }
@@ -71,6 +72,9 @@
   color: var(--text-color-primary);
   line-height: 1.18;
   user-select: none;
+  animation: leftContent 1s ease-in-out forwards;
+  animation-delay: 0.25s;
+  opacity: 0;
   @media (max-width: 920px) {
     [data-theme="dark"] & {
       color: #133231;
@@ -88,12 +92,14 @@
   font-size: 1.1em;
 }
 
-
 .hireMeWrapper {
+  opacity: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+  animation: leftContent 1s ease-in-out forwards;
+  animation-delay: 0.5s;
 }
 
 .hireMeText {
@@ -118,7 +124,8 @@
     top: 0;
     left: 0;
     content: "";
-    background: url('../../assets/img/home-bg.webp') center center/cover no-repeat;
+    background: url("../../assets/img/home-bg.webp") center center/cover
+      no-repeat;
     z-index: -1;
   }
   img {
@@ -129,6 +136,31 @@
     content: "";
     top: 50%;
     right: 0;
+    transform: translate(0%, -30%);
+    @media (min-width: 1025px) {
+      opacity: 0;
+      animation: fadeIn 1s ease-in-out forwards;
+    }
+    @media (max-width: 1025px) {
+      transform: translate(0%, -50%);
+    }
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
     transform: translate(0%, -50%);
+  }
+}
+
+@keyframes leftContent {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }

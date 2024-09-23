@@ -1,5 +1,6 @@
 .theme-switch {
-  --toggle-size: clamp(.7rem, 0.300rem + .8vw, 1.5rem);
+  --toggle-size: 13px;
+  // --toggle-size: clamp(.7rem, 0.300rem + .8vw, 1.5rem);
   --container-width: 5.625em;
   --container-height: 2.5em;
   --container-radius: 6.25em;
@@ -18,6 +19,12 @@
   --back-clouds-color: #aacadf;
   --transition: 0.5s cubic-bezier(0, -0.02, 0.4, 1.25);
   --circle-transition: 0.3s cubic-bezier(0, -0.02, 0.35, 1.17);
+  @media (min-width: 800px) and (max-width: 920px) {
+    --toggle-size: 13px;
+  }
+  @media (min-width: 480px) and (max-width: 800px) {
+    --toggle-size: 10px;  
+  }
 }
 
 .theme-switch,

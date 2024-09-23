@@ -9,6 +9,9 @@
   position: relative;
   max-width: 1000px;
   margin-bottom: 30px;
+  opacity: 0;
+  transform: translateY(20%);
+  animation: fadeIn 1s ease-in forwards;
 
   .swiper-slide {
     display: flex;
@@ -80,5 +83,12 @@
     &.swiper-pagination-bullet-active {
       opacity: 1;
     }
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

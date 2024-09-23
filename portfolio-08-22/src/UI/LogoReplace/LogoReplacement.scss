@@ -3,6 +3,7 @@
 .logoWrapper {
   display: flex;
   gap: 20px;
+  user-select: none;
 }
 
 .logoItems {
@@ -25,7 +26,13 @@
   cursor: default;
 
   .itemText {
-    transition: all .5s ease-in;
+    transition: all 0s ease-in;
+    color: var(--text-color-base);
+    opacity: 0.2;
+  }
+  &:hover .itemText {
+    opacity: 1;
+    color: blue;
   }
 }
 
@@ -45,12 +52,7 @@
 
 .logoItem span {
   color: var(--text-color-base);
-  opacity: 0.2;
-  transition: all 0.5s ease-in;
-  transition: opacity 0.5s ease-in;
-  [data-theme="light"] & {
-    color: black;
-  }
+  transition: all 0s ease-in;
 }
 
 .logoItemSvg svg {
@@ -58,16 +60,15 @@
   opacity: 0.2;
   width: 20px;
   height: 20px;
-  transition: all 0.5s ease-in;
-  transition: opacity 0.5s ease-in;
-  [data-theme="light"] & {
-    color: black;
-  }
+  transition: color 0s ease-in;
+  transition: opacity 0s ease-in;
 }
 
 .logoItemSvg svg path {
   width: 100%;
   aspect-ratio: 1;
+  transition: color 0s ease-in;
+  transition: opacity 0s ease-in;
 }
 
 .logoItem:hover {

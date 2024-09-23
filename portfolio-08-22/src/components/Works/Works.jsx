@@ -9,7 +9,7 @@ const Works = () => {
       <PageBackgroundManager page='works' />
       <div className='worksInfo'>
         <h2 className='worksInfoTitle'>Works</h2>
-        <p className='worksInfoText'>Here are some of my Pet Projects.</p>
+        <p className='worksInfoText'>Here are a few of my personal projects.</p>
       </div>
       <div className='worksQuote'>
         ” I'll grant your three wishes, but I'll do it badly. ”

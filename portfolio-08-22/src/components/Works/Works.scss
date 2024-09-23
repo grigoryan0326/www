@@ -8,17 +8,25 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    gap: 50px;
+    @media (max-width: 550px) {
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+    }
     .worksInfoTitle {
+      user-select: none;
       font-size: clamp(3rem, 2.423rem + 2.56vw, 5.5rem);
       color: var(--text-color-secondary);
     }
     .worksInfoText {
+      user-select: none;
       color: var(--text-color-primary);
-      font-size: clamp(1.5rem, 1.269rem + 0.9vw, 2.5rem);
+      font-size: clamp(1.7rem, 1.269rem + 0.9vw, 2.5rem);
     }
   }
   .worksQuote {
+    user-select: none;
     font-size: clamp(1.5rem, 1rem + 0.51vw, 2rem);
     color: var(--text-color-primary);
     margin-bottom: 50px;
@@ -37,6 +45,31 @@
     .worksQuoteImg {
       height: 50px;
       animation: movingY 5s infinite;
+    }
+  }
+  .websitePortfolio {
+    user-select: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    .websitePortfolioText {
+      color: var(--text-color-secondary);
+      @media (max-width: 920px) {
+        font-size: 0.8em;
+      }
+    }
+    .websitePortfolioSkills {
+      color: var(--text-color-base);
+      @media (max-width: 920px) {
+        font-size: 0.8em;
+      }
+    }
+    .websitePortfolioEnd {
+      margin-top: 20px;
+      color: var(--text-color-primary);
+      font-size: clamp(1.5rem, 1.338rem + 0.72vw, 2.2rem);
     }
   }
 }
