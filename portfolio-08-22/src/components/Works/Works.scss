@@ -18,11 +18,15 @@
       user-select: none;
       font-size: clamp(3rem, 2.423rem + 2.56vw, 5.5rem);
       color: var(--text-color-secondary);
+      opacity: 0;
+      animation: slide-bottom 1s ease-in-out forwards;
     }
     .worksInfoText {
       user-select: none;
       color: var(--text-color-primary);
       font-size: clamp(1.7rem, 1.269rem + 0.9vw, 2.5rem);
+      opacity: 0;
+      animation: slide-bottom 1s ease-in-out forwards;
     }
   }
   .worksQuote {
@@ -31,6 +35,8 @@
     color: var(--text-color-primary);
     margin-bottom: 50px;
     text-align: center;
+    opacity: 0;
+    animation: slide-top 1s ease-in-out forwards;
   }
   .worksQuoteAuthor {
     display: flex;
@@ -54,6 +60,8 @@
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    opacity: 0;
+    animation: slide-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
     .websitePortfolioText {
       color: var(--text-color-secondary);
       @media (max-width: 920px) {
@@ -83,5 +91,52 @@
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+@keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+            opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+            opacity: 1;
+  }
+}
+
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+            opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+            opacity: 1;
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+            opacity: 1;
   }
 }
