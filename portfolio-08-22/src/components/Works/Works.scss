@@ -23,15 +23,16 @@
     }
     .worksInfoText {
       user-select: none;
-      color: var(--text-color-primary);
-      font-size: clamp(1.7rem, 1.269rem + 0.9vw, 2.5rem);
+      color: var(--text-color-base);
+      text-shadow: 2px 2px 4px var(--text-color-base);
+      font-size: clamp(1.5rem, 1.269rem + 0.9vw, 2.5rem);
       opacity: 0;
       animation: slide-bottom 1s ease-in-out forwards;
     }
   }
   .worksQuote {
     user-select: none;
-    font-size: clamp(1.5rem, 1rem + 0.51vw, 2rem);
+    font-size: clamp(1.4rem, 1.262rem + 0.62vw, 2rem);
     color: var(--text-color-primary);
     margin-bottom: 50px;
     text-align: center;

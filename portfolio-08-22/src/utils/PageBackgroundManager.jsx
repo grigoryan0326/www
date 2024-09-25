@@ -3,7 +3,7 @@ import { useEffect } from "react"
 const PageBackgroundManager = ({ page }) => {
   useEffect(() => {
     const updateBackgroundColor = () => {
-      document.body.style.backgroundColor = getComputedStyle(
+      document.body.style.background = getComputedStyle(
         document.documentElement
       ).getPropertyValue(`--background-color-${page}`)
     }

@@ -43,6 +43,7 @@
       font-size: clamp(3rem, 2.423rem + 2.56vw, 5.5rem);
       text-wrap: nowrap;
       user-select: none;
+      animation: shake-vertical 1s linear 0s 1 normal none;
     }
     .clockText {
       color: var(--text-color-primary);
@@ -66,8 +67,7 @@
       color: var(--text-color-base);
       text-align: center;
       font-size: clamp(1.5rem, 1.269rem + 0.9vw, 2.5rem);
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-      transform: rotate(-4deg);
+      text-shadow: 2px 2px 4px var(--text-color-base);
       user-select: none;
     }
     .contactsTooltipsContainer {
@@ -104,5 +104,42 @@
         text-align: center;
       }
     }
+  }
+}
+
+@keyframes shake-vertical {
+			
+  0% {
+    transform:translateY(0);
+  }
+  10% {
+    transform:translateY(-8px);
+  }
+  20% {
+    transform:translateY(8px);
+  }
+  30% {
+    transform:translateY(-8px);
+  }
+  40% {
+    transform:translateY(8px);
+  }
+  50% {
+    transform:translateY(-8px);
+  }
+  60% {
+    transform:translateY(8px);
+  }
+  70% {
+    transform:translateY(-8px);
+  }
+  80% {
+    transform:translateY(6.4px);
+  }
+  90% {
+    transform:translateY(-6.4px);
+  }
+  100% {
+    transform:translateY(0);
   }
 }

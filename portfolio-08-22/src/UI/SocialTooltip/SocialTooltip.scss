@@ -1,6 +1,5 @@
 .example-1 {
   display: flex;
-  // justify-content: center;
   align-items: center;
 }
 .example-1 .icon-content {
@@ -89,7 +88,7 @@
 .example-1 .icon-content a[data-social="facebook"] ~ .tooltip {
   background-color: #1877f2;
 }
-.example-1 .icon-content a[data-social="telegram"] .filled,
-.example-1 .icon-content a[data-social="telegram"] ~ .tooltip {
-  background-color: #0088cc;
+.example-1 .icon-content a[data-social="linkedin"] .filled,
+.example-1 .icon-content a[data-social="linkedin"] ~ .tooltip {
+  background-color: #0077b5;
 }

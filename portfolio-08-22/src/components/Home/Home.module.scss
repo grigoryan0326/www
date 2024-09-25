@@ -106,6 +106,9 @@
   font-size: clamp(1rem, 0.769rem + 1.03vw, 2rem);
   color: var(--text-color-base);
   user-select: none;
+  [data-theme="dark"] & {
+    color: white;
+  }
 }
 
 [data-theme="light"] .hireMeText {

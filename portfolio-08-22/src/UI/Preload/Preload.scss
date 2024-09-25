@@ -8,7 +8,7 @@
   height: 100vh;
   width: 100%;
   display: flex;
-  background-color: var(--background-color-home);
+  background: var(--background-color-home);
 
   .preloadItem1,
   .preloadItem2,
@@ -21,17 +21,17 @@
   }
 
   .preloadItem1 {
-    background-color: var(--background-color-about);
+    background: var(--background-color-about);
     animation-delay: 0.25s;
   }
 
   .preloadItem2 {
-    background-color: var(--background-color-contacts);
+    background: var(--background-color-contacts);
     animation-delay: 0.5s;
   }
 
   .preloadItem3 {
-    background-color: var(--background-color-works);
+    background: var(--background-color-works);
     animation-delay: 0.75s;
   }
 }
@@ -46,6 +46,6 @@
     opacity: 1;
   }
   // 100% {
-  //   background-color: var(--background-color-home);
+  //   background: var(--background-color-home);
   // }
 }

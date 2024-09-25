@@ -1,6 +1,6 @@
 import { BiLogoGmail } from "react-icons/bi"
 import { FaGithub } from "react-icons/fa"
-import { FaLinkedin } from "react-icons/fa"
+import { FaTelegramPlane } from "react-icons/fa"
 import { IoCall } from "react-icons/io5"
 import "./ContactsTooltip.scss"
 
@@ -35,16 +35,16 @@ const ContactsTooltip = () => {
       </li>
       <li className='icon-content'>
         <a
-          href='https://www.linkedin.com/in/grigoryan0326/'
+          href='https://t.me/grigoryan0326'
           target='_blank'
           rel='noreferrer'
-          aria-label='Linkedin'
-          data-social='linkedin'
+          aria-label='Telegram'
+          data-social='telegram'
         >
           <div className='filled'></div>
-          <FaLinkedin />
+          <FaTelegramPlane />
         </a>
-        <div className='tooltip'>Linkedin</div>
+        <div className='tooltip'>Telegram</div>
       </li>
       <li
         className='icon-content'

@@ -1,7 +1,7 @@
-import { FaInstagram } from "react-icons/fa"
+import { FaInstagram, FaLinkedin } from "react-icons/fa"
 import { FaThreads } from "react-icons/fa6"
 import { FaFacebook } from "react-icons/fa"
-import { FaTelegramPlane } from "react-icons/fa"
+
 import "./SocialTooltip.scss"
 
 const SocialTooltip = () => {
@@ -22,16 +22,16 @@ const SocialTooltip = () => {
       </li>
       <li className='icon-content'>
         <a
-          href='https://t.me/grigoryan0326'
+          href='https://www.linkedin.com/in/grigoryan0326/'
           target='_blank'
           rel='noreferrer'
-          aria-label='Telegram'
-          data-social='telegram'
+          aria-label='Linkedin'
+          data-social='linkedin'
         >
           <div className='filled'></div>
-          <FaTelegramPlane />
+          <FaLinkedin />
         </a>
-        <div className='tooltip'>Telegram</div>
+        <div className='tooltip'>Linkedin</div>
       </li>
       <li className='icon-content'>
         <a
