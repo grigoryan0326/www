@@ -48,7 +48,6 @@ const ContactsTooltip = () => {
       </li>
       <li
         className='icon-content'
-        title='+374-99-98-93-99'
       >
         <a
           href='tel:+37499989399'
