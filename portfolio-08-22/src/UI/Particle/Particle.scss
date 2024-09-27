@@ -1,15 +1,8 @@
-// best in chrome
-// $total: 300; // total particles
-// $orb-size: 100px;
-// $particle-size: 2px;
-// $time: 14s;
-//     --text-color-secondary-light: hsl(51, 100%, 50%);
-// $base-hue: 0; // change for diff colors (180 is nice)
-$total: 500; // total particles
+$total: 500;
 $orb-size: 250px;
 $particle-size: 3px;
 $time: 15s;
-$base-hue: 230; // change for diff colors (180 is nice)
+$base-hue: 230;
 
 
 .wrap {
@@ -18,6 +11,7 @@ $base-hue: 230; // change for diff colors (180 is nice)
   left: 50%;
   width: 0;
   height: 0;
+  transform: translate(-50%, -50%);
   transform-style: preserve-3d;
   perspective: 1000px;
   animation: rotate $time infinite linear; // rotate orb

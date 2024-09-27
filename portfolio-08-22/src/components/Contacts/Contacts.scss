@@ -1,6 +1,4 @@
 .contactsWrapper {
-  // display: flex;
-  // justify-content: space-between;
   height: 100%;
   flex: 1;
   overflow: hidden;
@@ -8,10 +6,8 @@
   margin-bottom: 50px;
   margin-top: 50px;
   user-select: none;
-  @media (max-width: 1025px) {
+  @media (max-width: 1070px) {
     padding: 20px 20px 0 20px;
-    // flex-direction: column;
-    // gap: 70px;
     height: auto;
     margin-top: 0px;
   }
@@ -19,22 +15,29 @@
   .contactsTop {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 20px;
     margin-bottom: 50px;
+    @media (max-width: 1070px) {
+      flex-direction: column;
+    }
     .contactsTitle {
       font-size: clamp(3rem, 2.423rem + 2.56vw, 5.5rem);
       color: var(--text-color-secondary);
       width: 50%;
       flex-shrink: 0;
-      text-wrap: nowrap;
       animation: shake-vertical 1s linear 0s 1 normal none;
+      @media (max-width: 1070px) {
+        width: 100%;
+        text-align: center;
+      }
     }
     .contactsTopText {
       color: var(--text-color-base);
       text-align: center;
       font-size: clamp(1.5rem, 1.269rem + 0.9vw, 2.5rem);
       text-shadow: 2px 2px 4px var(--text-color-base);
-      user-select: none;
+      animation: shake-horizontal 1s linear 0s 1 normal none;
     }
   }
 
@@ -46,14 +49,18 @@
     align-items: center;
     gap: 50px;
   }
-  
+
   .tooltipsContainer {
     position: relative;
     display: flex;
     flex-direction: column;
     gap: 50px;
-    padding: 50px;
+    padding: 40px;
     overflow: hidden;
+    animation: puff-in-center .7s linear 0s 1 normal none;
+    @media (max-width: 490px){
+      padding: 40px 20px;
+    }
     .contactsTooltipWrapper,
     .socialTooltipWrapper {
       display: flex;
@@ -67,57 +74,41 @@
       font-size: clamp(1.4rem, 1.262rem + 0.62vw, 2rem);
       display: block;
       width: 100%;
-      user-select: none;
       margin-bottom: 50px;
     }
   }
-
-  .contactsLeft {
-    .clockWrapper {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      @media (min-width: 768px) and (max-width: 1025px) {
-        align-items: center;
-      }
-    }
+  .clockWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: scale-up-center .7s linear 0s 1 normal none;
     .clockText {
-      color: var(--text-color-primary);
+      color: var(--text-color-base);
       font-size: clamp(1.5rem, 1rem + 0.51vw, 2rem);
-      user-select: none;
-      @media (max-width: 1025px) {
-        display: block;
-        text-align: center;
-      }
+      text-align: center;
     }
   }
+}
 
-  .contactsRight {
-    @media (max-width: 1025px) {
-      gap: 70px;
-    }
-    @media (max-width: 440px) {
-      gap: 35px;
-    }
+@keyframes puff-in-center {
+  0% {
+    transform: scale(2);
+    filter: blur(4px);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
 
-    .contactsTooltipsContainer {
-      display: flex;
-      flex-direction: column;
-      gap: 70px;
-      @media (max-width: 440px) {
-        gap: 35px;
-      }
-    }
-    .contactsTooltipWrapper,
-    .socialTooltipWrapper {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 25px;
-      @media (max-width: 440px) {
-        flex-direction: column;
-      }
-    }
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0.2);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 
@@ -157,78 +148,132 @@
   }
 }
 
+@keyframes shake-horizontal {
+  0% {
+    transform: translateX(0);
+  }
+  10% {
+    transform: translateX(-10px);
+  }
+  20% {
+    transform: translateX(10px);
+  }
+  30% {
+    transform: translateX(-10px);
+  }
+  40% {
+    transform: translateX(10px);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  60% {
+    transform: translateX(10px);
+  }
+  70% {
+    transform: translateX(-10px);
+  }
+  80% {
+    transform: translateX(8px);
+  }
+  90% {
+    transform: translateX(-8px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 
+/* ================ tooltips border animation ================ */
 
 .tooltipsContainer span:nth-child(1) {
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 100%;
-	height: 3px;
-	background: linear-gradient(to right, var(--text-color-primary), var(--text-color-base));
-	animation: animate1 10s linear infinite;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(
+    to right,
+    var(--text-color-primary),
+    var(--text-color-base)
+  );
+  animation: animate1 10s linear infinite;
 }
 
 @keyframes animate1 {
-	0% {
-		transform: translateX(-100%);
-	}
-	100% {
-		transform: translateX(100%);
-	}
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
 .tooltipsContainer span:nth-child(2) {
-	position: absolute;
-	top: 0;
-	right: 0;
-	height: 100%;
-	width: 3px;
-	background: linear-gradient(to right, var(--text-color-primary), var(--text-color-base));
-	animation: animate2 10s linear infinite;
-	animation-delay: 5s;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 3px;
+  background: linear-gradient(
+    to right,
+    var(--text-color-primary),
+    var(--text-color-base)
+  );
+  animation: animate2 10s linear infinite;
+  animation-delay: 5s;
+  transform: translateY(100%);
 }
 @keyframes animate2 {
-	0% {
-		transform: translateY(-100%);
-	}
-	100% {
-		transform: translateY(100%);
-	}
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
 }
 .tooltipsContainer span:nth-child(3) {
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	width: 100%;
-	height: 3px;
-	background: linear-gradient(to right, var(--text-color-primary), var(--text-color-base));
-	animation: animate3 10s linear infinite;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(
+    to right,
+    var(--text-color-primary),
+    var(--text-color-base)
+  );
+  animation: animate3 10s linear infinite;
 }
 
 @keyframes animate3 {
-	0% {
-		transform: translateX(100%);
-	}
-	100% {
-		transform: translateX(-100%);
-	}
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 .tooltipsContainer span:nth-child(4) {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 3px;
-	background: linear-gradient(to right, var(--text-color-primary), var(--text-color-base));
-	animation: animate4 10s linear infinite;
-	animation-delay: 5s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 3px;
+  background: linear-gradient(
+    to right,
+    var(--text-color-primary),
+    var(--text-color-base)
+  );
+  animation: animate4 10s linear infinite;
+  animation-delay: 5s;
+  transform: translateY(-100%);
 }
 
 @keyframes animate4 {
-	0% {
-		transform: translateY(100%);
-	}
-	100% {
-		transform: translateY(-100%);
-	}
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
 }

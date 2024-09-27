@@ -2,23 +2,10 @@
   position: relative;
   display: flex;
   flex-flow: column wrap;
-  width: 90%;
-  height: 150px;
-  @media (max-width: 1100px) {
-    height: 130px;
-  }
-  @media (max-width: 580px) {
-    height: 100px;
-    }
-     @media (min-width: 720px) and (max-width: 1025px) {
-      width: 50%;
-     }
-     @media (min-width: 581px) and (max-width: 720px) {
-      width: 70%;
-     }
-
+  width: 100%;
+  height: clamp(6.875rem, 3.275rem + 16vw, 9.375rem);
   .block {
-    width: calc(100% / 12);
+    width: calc((100% - 40px) / 12);
     height: 20%;
     color: rgba(0, 0, 0, 0.15);
     transition: 0.4s;
@@ -41,12 +28,9 @@
       height: 100%;
       line-height: 30px;
       text-align: center;
-      @media (max-width: 1100px) {
-        font-size: 20px;
+      @media (max-width: 610px) {
+        font-size: clamp(1rem, 0.28rem + 3.2vw, 1.5rem);
       }
-      @media (max-width: 580px) {
-        font-size: 18px;
-        }
     }
 
     &:nth-child(-n + 10):before {
@@ -59,7 +43,7 @@
     }
 
     &.second:before {
-      color: var(--text-color-secondary);
+      color: var(--text-color-base);
     }
   }
 }
@@ -69,6 +53,7 @@
   width: 2px;
   background-color: var(--text-color-primary);
   height: 60%;
-  top: 20%;
-  left: calc(50% + 19px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

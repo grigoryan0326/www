@@ -46,9 +46,7 @@ const ContactsTooltip = () => {
         </a>
         <div className='tooltip'>Telegram</div>
       </li>
-      <li
-        className='icon-content'
-      >
+      <li className='icon-content'>
         <a
           href='tel:+37499989399'
           target='_blank'

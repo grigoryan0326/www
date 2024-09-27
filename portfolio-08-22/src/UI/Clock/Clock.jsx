@@ -85,9 +85,6 @@ const Clock = () => {
     window.requestAnimationFrame(animator)
   }, [time])
 
-  // const changeTheme = () => {
-  //   document.body.classList.toggle("light-theme")
-  // }
 
   return (
     <>
@@ -101,16 +98,6 @@ const Clock = () => {
         ))}
         <div className='divider'></div>
       </div>
-      {/* <div className='switch-theme'>
-        <p>Change theme</p>
-        <label className='switch'>
-          <input
-            type='checkbox'
-            onChange={changeTheme}
-          />
-          <span className='slider'></span>
-        </label>
-      </div> */}
     </>
   )
 }

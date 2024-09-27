@@ -28,10 +28,9 @@ const Works = () => {
           Here you are on the project page, which represents the pinnacle of my
           progress. This is my portfolio website, where I’ve combined much of
           what I’ve learned to showcase myself and my works in a minimalist, yet
-          effective way. It’s a creation I’ve poured my heart into, and I’m
-          proud of it. This site not only reflects my technical skills but also
-          my journey as a developer—constantly learning, growing, and striving
-          for excellence in every detail.
+          effective way. This site not only reflects my technical skills but
+          also my journey as a developer—constantly learning, growing, and
+          striving for excellence in every detail.
         </p>
         <p className='websitePortfolioSkills'>
           Used skills: HTML, SCSS, JavaScript, React, React-router, Redux
