@@ -3,7 +3,10 @@ import s from "./HireMe.module.scss"
 
 const HireMe = () => {
   return (
-    <Link to='/contacts' className={s.link}>
+    <Link
+      to='/contacts'
+      className={s.link}
+    >
       <button className={s.button + " " + s.type1}></button>
     </Link>
   )

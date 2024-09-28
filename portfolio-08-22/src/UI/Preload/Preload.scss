@@ -38,14 +38,11 @@
 
 @keyframes preload {
   0% {
-    transform: translateY(100%); // Начальная позиция за пределами экрана
+    transform: translateY(100%);
     opacity: 0;
   }
   100% {
     transform: translateY(0);
     opacity: 1;
   }
-  // 100% {
-  //   background: var(--background-color-home);
-  // }
 }

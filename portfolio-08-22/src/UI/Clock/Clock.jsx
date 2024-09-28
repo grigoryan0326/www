@@ -85,7 +85,6 @@ const Clock = () => {
     window.requestAnimationFrame(animator)
   }, [time])
 
-
   return (
     <>
       <div className='clock'>

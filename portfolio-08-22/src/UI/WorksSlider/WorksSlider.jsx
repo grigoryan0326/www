@@ -60,15 +60,10 @@ export default function WorksSlider() {
     updateTopPosition()
 
     const resizeObserver = new ResizeObserver(updateTopPosition)
-    if (elementRef.current) {
-      resizeObserver.observe(elementRef.current)
-    }
-
-    if (elementRef.current) {
-      resizeObserver.observe(elementRef.current)
-    }
-
     const current = elementRef.current
+    if (current) {
+      resizeObserver.observe(current)
+    }
 
     return () => {
       if (current) {
@@ -81,6 +76,7 @@ export default function WorksSlider() {
     <StyledSwiper
       $paginationTopValue={paginationTopValue}
       $navigationTopValue={navigationTopValue}
+      className='styled-container'
     >
       <Swiper
         modules={[Pagination, Navigation, EffectFade, Autoplay, Mousewheel]}

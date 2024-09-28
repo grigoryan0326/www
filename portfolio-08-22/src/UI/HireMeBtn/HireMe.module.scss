@@ -63,12 +63,12 @@
   }
 }
 
-[data-theme="light"] .type1::after{
+[data-theme="light"] .type1::after {
   background: var(--text-color-base);
   color: var(--text-color-secondary);
 }
-[data-theme="light"] .type1::before{
-  color: var(--text-color-base  );
+[data-theme="light"] .type1::before {
+  color: var(--text-color-base);
 }
 
 .type1:hover::after {

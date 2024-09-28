@@ -9,46 +9,6 @@ import "./About.scss"
 import TakeATourBtn from "../../UI/TakeATourBtn/TakeATourBtn"
 
 const About = () => {
-  // useEffect(() => {
-  //   const options = {
-  //     threshold: 0.5,
-  //   }
-
-  //   const rightCallback = (entries) =>
-  //     entries.forEach((entry, i) => {
-  //       if (entry.isIntersecting) {
-  //         entry.target.classList.add("scrolledFromRight")
-  //       }
-  //     })
-  //   const leftCallback = (entries) =>
-  //     entries.forEach((entry) => {
-  //       if (entry.isIntersecting) {
-  //         entry.target.classList.add("scrolledFromLeft")
-  //       }
-  //     })
-
-  //   const opacityCallback = (entries) =>
-  //     entries.forEach((entry) => {
-  //       if (entry.isIntersecting) {
-  //         entry.target.classList.add("opacity")
-  //       }
-  //     })
-
-  //   const leftObserver = new IntersectionObserver(leftCallback, options)
-  //   const rightObserver = new IntersectionObserver(rightCallback, options)
-  //   const opacityObserver = new IntersectionObserver(opacityCallback, options)
-
-  //   document.querySelectorAll(".left").forEach((item) => {
-  //     leftObserver.observe(item)
-  //     opacityObserver.observe(item)
-  //   })
-
-  //   document.querySelectorAll(".right").forEach((item) => {
-  //     rightObserver.observe(item)
-  //     opacityObserver.observe(item)
-  //   })
-  // }, [])
-
   useEffect(() => {
     const options = {
       threshold: 0.5,
@@ -57,7 +17,6 @@ const About = () => {
     const callback = (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          // Убираем класс opacity, если элемент в зоне видимости
           entry.target.classList.remove("opacity")
 
           if (entry.target.classList.contains("left")) {
@@ -66,7 +25,6 @@ const About = () => {
             entry.target.classList.add("scrolledFromRight")
           }
         } else {
-          // Добавляем класс opacity, если элемент вышел за пределы видимости
           entry.target.classList.add("opacity")
         }
       })
@@ -74,12 +32,10 @@ const About = () => {
 
     const observer = new IntersectionObserver(callback, options)
 
-    // Используем единый запрос для элементов с классами "left" и "right"
     const items = document.querySelectorAll(".left, .right")
     items.forEach((item) => observer.observe(item))
 
     return () => {
-      // Очищаем наблюдатели при размонтировании компонента
       items.forEach((item) => observer.unobserve(item))
     }
   }, [])

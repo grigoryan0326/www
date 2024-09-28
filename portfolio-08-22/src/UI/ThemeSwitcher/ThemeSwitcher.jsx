@@ -20,7 +20,7 @@ const ThemeSwitcher = () => {
 
   return (
     <label
-      title="Change theme"
+      title='Change theme'
       className='theme-switch'
       onClick={toggleTheme}
     >

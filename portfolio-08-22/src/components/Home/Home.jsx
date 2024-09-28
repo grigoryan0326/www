@@ -1,15 +1,29 @@
 import { TypeAnimation } from "react-type-animation"
+import { useEffect, useState } from "react"
 import s from "./Home.module.scss"
-// import StarField from "../StarField/StarField"
 import bgImage from "../../assets/img/home-bg.webp"
 import HireMe from "../../UI/HireMeBtn/HireMe"
 import PageBackgroundManager from "../../utils/PageBackgroundManager"
-import { useEffect, useState } from "react"
 import Preload from "../../UI/Preload/Preload"
+import Works from "../../utils/WorksSlideData"
 
 const Home = () => {
   const [isLoaded, setIsLoaded] = useState(false)
   const [showPreloader, setShowPreloader] = useState(true)
+
+  useEffect(() => {
+    const preloadVideos = () => {
+      console.log("called")
+
+      Works.forEach((slide) => {
+        const video = document.createElement("video")
+        video.src = slide.src
+        video.preload = "auto"
+      })
+    }
+
+    preloadVideos()
+  }, [])
 
   useEffect(() => {
     const hasLoaded = sessionStorage.getItem("homeLoaded")

@@ -1,9 +1,8 @@
-import { useLocation } from 'react-router-dom'
-import './Burger.scss'
-import { useEffect } from 'react'
+import { useLocation } from "react-router-dom"
+import { useEffect } from "react"
+import "./Burger.scss"
 
 const Burger = ({ toggleMenu, setIsMenuOpen, isMenuOpen }) => {
-  
   const location = useLocation()
 
   useEffect(() => {
@@ -12,7 +11,11 @@ const Burger = ({ toggleMenu, setIsMenuOpen, isMenuOpen }) => {
 
   return (
     <label className='hamburger'>
-      <input type='checkbox' onChange={toggleMenu} checked={isMenuOpen}/>
+      <input
+        type='checkbox'
+        onChange={toggleMenu}
+        checked={isMenuOpen}
+      />
       <svg viewBox='0 0 32 32'>
         <path
           className='line line-top-bottom'
