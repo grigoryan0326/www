@@ -7,7 +7,7 @@
   .block {
     width: calc((100% - 40px) / 12);
     height: 20%;
-    color: rgba(0, 0, 0, 0.15);
+    color: rgba(0, 0, 0, 0.07);
     transition: 0.4s;
 
     &:not(:nth-child(n + 16)):nth-child(n + 11),
@@ -38,12 +38,12 @@
     }
 
     &.active:before {
-      color: var(--text-color-primary);
+      color: var(--text-color-base);
       font-weight: 700;
     }
 
     &.second:before {
-      color: var(--text-color-base);
+      color: var(--text-color-primary);
     }
   }
 }
@@ -51,7 +51,7 @@
 .divider {
   position: absolute;
   width: 2px;
-  background-color: var(--text-color-primary);
+  background-color: var(--text-color-base);
   height: 60%;
   top: 50%;
   left: 50%;

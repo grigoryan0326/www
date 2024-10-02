@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 * {
   margin: 0;
@@ -44,7 +46,8 @@ button {
 }
 
 body {
-  font-family: "Platypi", serif;
+  // font-family: "Platypi", serif;
+  font-family: "Fredoka", sans-serif;
   font-display: swap;
   font-size: 24px;
 }
@@ -52,63 +55,55 @@ body {
 /* ================ stth ================ */
 
 :root {
-  // --background-color-light-home: #3277d2;
   --background-color-light-home: linear-gradient(
     90deg,
     rgba(50, 119, 210, 1) 0%,
     rgba(58, 140, 224, 1) 50%
   );
-  // --background-color-light-about: #3a8ce0;
   --background-color-light-about: linear-gradient(
     90deg,
     rgba(58, 140, 224, 1) 0%,
     rgba(66, 162, 230, 1) 50%
   );
-  // --background-color-light-contacts: #42a2e6;
   --background-color-light-contacts: linear-gradient(
     90deg,
     rgba(66, 162, 230, 1) 0%,
     rgba(74, 184, 236, 1) 50%
   );
-  // --background-color-light-works: #4ab8ec;
   --background-color-light-works: linear-gradient(
     90deg,
     rgba(74, 184, 236, 1) 0%,
     rgba(50, 119, 210, 1) 50%
   );
 
-  // --background-color-dark-home: rgb(5, 5, 33);
   --background-color-dark-home: linear-gradient(
     90deg,
     rgba(5, 5, 33, 1) 0%,
     rgba(7, 7, 46, 1) 50%
   );
-  // --background-color-dark-about: rgb(7, 7, 46);
   --background-color-dark-about: linear-gradient(
     90deg,
     rgba(7, 7, 46, 1) 0%,
     rgba(9, 9, 59, 1) 50%
   );
-  // --background-color-dark-contacts: rgb(9, 9, 59);
   --background-color-dark-contacts: linear-gradient(
     90deg,
     rgba(9, 9, 59, 1) 0%,
     rgba(11, 11, 72, 1) 50%
   );
-  // --background-color-dark-works: rgb(11, 11, 72);
   --background-color-dark-works: linear-gradient(
     90deg,
     rgba(11, 11, 72, 1) 0%,
     rgba(5, 5, 33, 1) 50%
   );
 
-  --text-color-primary-dark: rgb(101, 90, 106);
-  --text-color-secondary-dark: rgb(35, 35, 229);
+  --text-color-primary-dark: #c8c8c8;
+  --text-color-secondary-dark: #4169e1;
   --text-color-base-dark: rgb(150, 150, 200);
 
   --text-color-primary-light: #f0f0f0;
   --text-color-secondary-light: #ffd700;
-  --text-color-base-light: #5c5252;
+  --text-color-base-light: #003e73;
 }
 
 [data-theme="light"] {

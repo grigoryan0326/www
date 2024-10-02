@@ -83,7 +83,7 @@
     gap: 20px;
     animation: scale-up-center .7s linear 0s 1 normal none;
     .clockText {
-      color: var(--text-color-base);
+      color: var(--text-color-primary);
       font-size: clamp(1.5rem, 1rem + 0.51vw, 2rem);
       text-align: center;
     }
@@ -195,7 +195,7 @@
   background: linear-gradient(
     to right,
     var(--text-color-primary),
-    var(--text-color-base)
+    var(--text-color-secondary)
   );
   animation: animate1 10s linear infinite;
 }
@@ -217,7 +217,7 @@
   background: linear-gradient(
     to right,
     var(--text-color-primary),
-    var(--text-color-base)
+    var(--text-color-secondary)
   );
   animation: animate2 10s linear infinite;
   animation-delay: 5s;
@@ -240,7 +240,7 @@
   background: linear-gradient(
     to right,
     var(--text-color-primary),
-    var(--text-color-base)
+    var(--text-color-secondary)
   );
   animation: animate3 10s linear infinite;
 }
@@ -262,7 +262,7 @@
   background: linear-gradient(
     to right,
     var(--text-color-primary),
-    var(--text-color-base)
+    var(--text-color-secondary)
   );
   animation: animate4 10s linear infinite;
   animation-delay: 5s;

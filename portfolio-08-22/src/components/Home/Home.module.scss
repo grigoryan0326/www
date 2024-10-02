@@ -119,6 +119,7 @@
   width: 100%;
   overflow: hidden;
   position: relative;
+  border-radius: 20px;
   @media (max-width: 1025px) {
     max-width: none;
     position: absolute;
@@ -130,6 +131,7 @@
     background: url("../../assets/img/home-bg.webp") center center/cover
       no-repeat;
     z-index: -1;
+    border-radius: 0;
   }
   img {
     position: absolute;
@@ -140,6 +142,7 @@
     top: 50%;
     right: 0;
     transform: translate(0%, -30%);
+    filter: brightness(0.8);
     @media (min-width: 1025px) {
       opacity: 0;
       animation: fadeIn 1s ease-in-out forwards;

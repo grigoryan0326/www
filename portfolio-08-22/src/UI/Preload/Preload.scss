@@ -2,43 +2,37 @@
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 100;
-  height: 100vh;
   width: 100%;
+  height: 100vh;
+  z-index: 1000;
   display: flex;
-  background: var(--background-color-home);
-
-  .preloadItem1,
-  .preloadItem2,
-  .preloadItem3 {
-    opacity: 0;
+  
+  .preloadItem {
     flex: 1;
-    width: calc(100% / 3);
-    height: 100%;
-    animation: preload 1s ease-in-out forwards;
-  }
-
-  .preloadItem1 {
-    background: var(--background-color-about);
-    animation-delay: 0.25s;
-  }
-
-  .preloadItem2 {
-    background: var(--background-color-contacts);
-    animation-delay: 0.5s;
-  }
-
-  .preloadItem3 {
-    background: var(--background-color-works);
-    animation-delay: 0.75s;
+    width: 100%;
+    background: var(--background-color-home);
+    opacity: 0;
+    animation: slideDown 1s ease-in-out forwards;
+    
+    &.preloadItem1 {
+      background: var(--background-color-about);
+    }
+    
+    &.preloadItem2 {
+      background: var(--background-color-contacts);
+      animation-delay: 0.5s;
+    }
+    
+    &.preloadItem3 {
+      background: var(--background-color-works);
+      animation-delay: 0.75s;
+    }
   }
 }
 
-@keyframes preload {
+@keyframes slideDown {
   0% {
-    transform: translateY(100%);
+    transform: translateY(-100%);
     opacity: 0;
   }
   100% {

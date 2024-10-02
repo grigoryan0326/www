@@ -27,8 +27,11 @@
 
   .itemText {
     transition: all 0s ease-in;
-    color: var(--text-color-base);
+    color: var(--text-color-primary);
     opacity: 0.2;
+    [data-theme="light"] & {
+      opacity: .5;
+    }
   }
   &:hover .itemText {
     opacity: 1;
@@ -51,17 +54,20 @@
 }
 
 .logoItem span {
-  color: var(--text-color-base);
+  color: var(--text-color-primary);
   transition: all 0s ease-in;
 }
 
 .logoItemSvg svg {
-  color: var(--text-color-base);
+  color: var(--text-color-primary);
   opacity: 0.2;
   width: 20px;
   height: 20px;
   transition: color 0s ease-in;
   transition: opacity 0s ease-in;
+  [data-theme="light"] & {
+    opacity: .5;
+  }
 }
 
 .logoItemSvg svg path {
