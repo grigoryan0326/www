@@ -9,12 +9,14 @@
   z-index: 11;
   min-height: 75px;
   @media (max-width: 920px) {
-    margin-bottom: 0;
+    margin-bottom: 30px;
     padding: 20px;
   }
   @media (max-width: 480px) {
-    margin-bottom: 0;
-    padding: 10px;
+    margin-bottom: 10px;
+  }
+  @media (orientation: landscape) and (max-width: 920px) {
+    padding-inline: 40px;
   }
 }
 

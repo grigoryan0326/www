@@ -1,14 +1,51 @@
 import { useEffect } from "react"
-import PageBackgroundManager from "../../utils/PageBackgroundManager"
 import { BsFillMortarboardFill } from "react-icons/bs"
 import { LuLanguages } from "react-icons/lu"
 import { AM } from "country-flag-icons/react/3x2"
 import { RU } from "country-flag-icons/react/3x2"
 import { US } from "country-flag-icons/react/3x2"
-import "./About.scss"
+import PageBackgroundManager from "../../utils/PageBackgroundManager"
 import TakeATourBtn from "../../UI/TakeATourBtn/TakeATourBtn"
+import "./About.scss"
 
 const About = () => {
+  const skills = {
+    hardSkills: [
+      "HTML5, JSX",
+      "CSS (CSS3), SASS (SCSS)",
+      "JavaScript (ES6+)",
+      "Basic understanding TypeScript",
+      "React.js",
+      "Redux (Redux Toolkit)",
+      "Next.js",
+      "Version Control (Git)",
+      "Figma, Adobe Photoshop, Avocode",
+      "Responsive Design",
+      "Cross-Browser Compatibility",
+      "Basic SEO Principles",
+      "Basic UI/UX Principles",
+      "Package Managers",
+      "Performance Optimization",
+    ],
+    softSkills: [
+      "Teamwork",
+      "Learning Agility",
+      "Problem-Solving",
+      "Creativity",
+      "Critical Thinking",
+      "Communication Skills",
+      "Attention to Detail",
+      "Time Management",
+      "Empathy",
+      "Patience",
+      "Accountability",
+      "Collaboration",
+      "Curiosity",
+      "Self-Motivation",
+      "Perseverance",
+    ],
+  }
+
   useEffect(() => {
     const options = {
       threshold: 0.5,
@@ -82,12 +119,12 @@ const About = () => {
           </h2>
           <p className='educationItem'>
             Heratsi High School{" "}
-            <span className='coloredItemSpan'>Economics </span>
-            <span className='coloredItemSpan'>(2014-2017)</span>
+            <span className='coloredItemSpan'>Economics (2014-2017)</span>
           </p>
           <p className='educationItem'>
-            ASUE <span className='coloredItemSpan'>Finance </span>
-            <span className='coloredItemSpan'>Bechelor degree (2017-2021)</span>
+            ASUE{" "}
+            <span className='coloredItemSpan'>Finance Bechelor degree</span>
+            <span className='coloredItemSpan'>(2017-2021)</span>
           </p>
         </div>
         <div className='infoLanguages right'>
@@ -95,15 +132,24 @@ const About = () => {
             Languages <LuLanguages className='infoIcon' />
           </h2>
           <p className='languagesItem'>
-            <AM className='flag' />
+            <AM
+              className='flag'
+              atl='Armenian flag'
+            />
             Armenian <span className='languagesItemColored'>(Native)</span>
           </p>
           <p className='languagesItem'>
-            <US className='flag' />
+            <US
+              className='flag'
+              alt='USA flag'
+            />
             English <span className='languagesItemColored'>(Advanced)</span>
           </p>
           <p className='languagesItem'>
-            <RU className='flag' />
+            <RU
+              className='flag'
+              alt='Russian flag'
+            />
             Russian <span className='languagesItemColored'>(Fluent)</span>
           </p>
         </div>
@@ -115,53 +161,27 @@ const About = () => {
         <div className='aboutContentHard'>
           <h2 className='aboutContentHardTitle left'>Hard Skills</h2>
           <ul className='aboutContentHardList'>
-            <li className='aboutContentHardItem left'>HTML5, JSX</li>
-            <li className='aboutContentHardItem left'>
-              CSS (CSS3),SASS (SCSS)
-            </li>
-            <li className='aboutContentHardItem left'>JavaScript (ES6+)</li>
-            <li className='aboutContentHardItem left'>
-              Basic understanding TypeScript
-            </li>
-            <li className='aboutContentHardItem left'>React.js</li>
-            <li className='aboutContentHardItem left'>Redux (Redux Toolkit)</li>
-            <li className='aboutContentHardItem left'>Next.js</li>
-            <li className='aboutContentHardItem left'>Version Control (Git)</li>
-            <li className='aboutContentHardItem left'>
-              Figma, Adobe Photoshop, Avocode
-            </li>
-            <li className='aboutContentHardItem left'>Responsive Design</li>
-            <li className='aboutContentHardItem left'>
-              Cross-Browser Compatibility
-            </li>
-            <li className='aboutContentHardItem left'>Basic SEO Principles</li>
-            <li className='aboutContentHardItem left'>
-              Basic UI/UX Principles
-            </li>
-            <li className='aboutContentHardItem left'>Package Managers</li>
-            <li className='aboutContentHardItem left'>
-              Performance Optimization
-            </li>
+            {skills.hardSkills.map((skill, index) => (
+              <li
+                key={index}
+                className='aboutContentHardItem left'
+              >
+                {skill}
+              </li>
+            ))}
           </ul>
         </div>
         <div className='aboutContentSoft'>
           <h2 className='aboutContentSoftTitle right'>Soft Skills</h2>
           <ul className='aboutContentSoftList'>
-            <li className='aboutContentSoftItem right'>Teamwork</li>
-            <li className='aboutContentSoftItem right'>Learning Agility</li>
-            <li className='aboutContentSoftItem right'>Problem-Solving</li>
-            <li className='aboutContentSoftItem right'>Creativity</li>
-            <li className='aboutContentSoftItem right'>Critical Thinking</li>
-            <li className='aboutContentSoftItem right'>Communication Skills</li>
-            <li className='aboutContentSoftItem right'>Attention to Detail</li>
-            <li className='aboutContentSoftItem right'>Time Management</li>
-            <li className='aboutContentSoftItem right'>Empathy</li>
-            <li className='aboutContentSoftItem right'>Patience</li>
-            <li className='aboutContentSoftItem right'>Accountability</li>
-            <li className='aboutContentSoftItem right'>Collaboration</li>
-            <li className='aboutContentSoftItem right'>Curiosity</li>
-            <li className='aboutContentSoftItem right'>Self-Motivation</li>
-            <li className='aboutContentSoftItem right'>Perseverance</li>
+            {skills.softSkills.map((skill, index) => (
+              <li
+                key={index}
+                className='aboutContentSoftItem right'
+              >
+                {skill}
+              </li>
+            ))}
           </ul>
         </div>
       </div>

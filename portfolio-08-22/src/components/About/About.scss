@@ -7,14 +7,18 @@
   @media (max-width: 920px) {
     padding: 0px 20px 0 20px;
   }
+  @media (orientation: landscape) and (max-width: 920px) {
+    padding: 20px 40px 0px 40px;
+  }
   .aboutTitleWrapper {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     text-align: center;
-    min-height: calc(100dvh - 105px);
+    min-height: calc(100dvh - 145px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 25px;
+    gap: 30px;
+    padding-bottom: 20px;
     .aboutTitle {
       font-size: clamp(3rem, 2.423rem + 2.56vw, 5.5rem);
       color: var(--text-color-secondary);
@@ -35,7 +39,6 @@
       text-shadow: none;
     }
     .aboutTitleBtn {
-      margin-bottom: 20px;
       animation: bounce-in-bottom 1.1s both;
     }
   }
@@ -48,10 +51,11 @@
     align-items: start;
     gap: 20px;
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
     @media (max-width: 1025px) {
       flex-direction: column;
       align-items: center;
+      gap: 50px;
     }
     .infoEducation,
     .infoLanguages {
@@ -65,7 +69,7 @@
     .infoEducationTitle,
     .infoLanguagesTitle {
       color: var(--text-color-secondary);
-      margin-bottom: 25px;
+      margin-bottom: 30px;
       font-size: 2rem;
       display: flex;
       align-items: center;
@@ -97,7 +101,7 @@
 
   .aboutContentTitle {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
     font-size: 2rem;
     animation: vibrate-3 1.4s linear both;
   }
@@ -106,10 +110,11 @@
     justify-content: space-between;
     gap: 20px;
     width: 100%;
+    padding-bottom: 30px;
     @media (max-width: 1025px) {
       flex-direction: column;
       align-items: center;
-      padding: 0px 20px 0 20px;
+      gap: 50px;
     }
     .aboutContentHard,
     .aboutContentSoft {
@@ -124,7 +129,7 @@
     .aboutContentHardTitle,
     .aboutContentSoftTitle {
       color: var(--text-color-secondary);
-      margin-bottom: 25px;
+      margin-bottom: 35px;
     }
     .aboutContentHardTitle {
       font-weight: 700;
@@ -136,23 +141,21 @@
     .aboutContentSoftList {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 30px;
     }
     .aboutContentHardItem,
     .aboutContentSoftItem {
-      background: var(--text-color-primary);
-      color: #3a8ce0;
-      font-size: 0.9em;
-      padding: 15px;
-      border-radius: 20px;
+      background: transparent;
+      color: var(--text-color-base);
+      font-size: 1em;
+      padding: 10px;
+      border-radius: 10px;
+      transition: box-shadow 0.3s ease;
       box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3),
-        -5px -5px 10px var(--text-color-primary);
-      [data-theme="dark"] & {
-        color: #07072e;
-      }
+        -5px -5px 10px var(--text-color-base);
       &:hover {
         box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.3),
-          inset -5px -5px 10px var(--text-color-primary);
+          inset -5px -5px 10px transparent;
       }
     }
     .aboutContentSoftItem {
@@ -465,5 +468,23 @@
   100% {
     -webkit-transform: translate(0);
     transform: translate(0);
+  }
+}
+
+@media (max-width: 520px) {
+  .coloredItemSpan {
+    display: block;
+  }
+  .educationItem:first-of-type {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 1062px) and (min-width: 1025px) {
+  .coloredItemSpan {
+    display: block;
+  }
+  .educationItem:first-of-type {
+    margin-bottom: 15px;
   }
 }

@@ -60,6 +60,9 @@
 
 .c-button--gooey:hover {
   color: var(--text-color-base);
+  [data-theme="dark"] & {
+    color: var(--text-color-primary);
+  }
 }
 
 .c-button--gooey:hover .c-button__blobs div {

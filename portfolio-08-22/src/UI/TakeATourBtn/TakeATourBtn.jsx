@@ -3,9 +3,9 @@ import "./TakeATour.scss"
 const TakeATourBtn = () => {
   return (
     <div>
-      <button class='c-button c-button--gooey'>
+      <button className='c-button c-button--gooey'>
         Lets take a tour!
-        <div class='c-button__blobs'>
+        <div className='c-button__blobs'>
           <div></div>
           <div></div>
           <div></div>

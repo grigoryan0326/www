@@ -29,6 +29,9 @@
     transition: all 0s ease-in;
     color: var(--text-color-primary);
     opacity: 0.2;
+    @media (max-width: 1025px) {
+      opacity: 0.5;
+    }
     [data-theme="light"] & {
       opacity: .5;
     }
@@ -65,6 +68,9 @@
   height: 20px;
   transition: color 0s ease-in;
   transition: opacity 0s ease-in;
+  @media (max-width: 1025px) {
+    opacity: 0.5;
+  }
   [data-theme="light"] & {
     opacity: .5;
   }
