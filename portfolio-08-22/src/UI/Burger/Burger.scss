@@ -14,13 +14,12 @@
 .hamburger svg {
   height: 2em;
   transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
-  background: rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 }
 
 .line {
   fill: none;
-  stroke: var(--text-color-primary);
+  stroke: var(--text-color-secondary);
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 3;

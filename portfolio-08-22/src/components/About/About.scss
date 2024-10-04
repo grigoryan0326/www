@@ -6,9 +6,10 @@
   user-select: none;
   @media (max-width: 920px) {
     padding: 0px 20px 0 20px;
+    margin-bottom: 20px;
   }
   @media (orientation: landscape) and (max-width: 920px) {
-    padding: 20px 40px 0px 40px;
+    padding: 0px 40px 0px 40px;
   }
   .aboutTitleWrapper {
     margin-bottom: 50px;

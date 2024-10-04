@@ -45,6 +45,9 @@
     width: clamp(3.75rem, 2.4rem + 6vw, 4.688rem);
     height: clamp(3.75rem, 2.4rem + 6vw, 4.688rem);
   }
+  [data-theme="dark"] & {
+    color: var(--text-color-secondary);
+  }
 }
 .example-2 .icon-content a:hover {
   box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 50%);

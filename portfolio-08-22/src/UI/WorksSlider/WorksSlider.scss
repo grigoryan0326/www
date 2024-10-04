@@ -15,7 +15,7 @@
   width: 100%;
   height: auto;
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   animation: slide-top 1s ease-in-out forwards;
 
   .swiper-slide {
@@ -44,7 +44,7 @@
       opacity: 0;
       .swiper-title {
         color: var(--text-color-secondary);
-        margin-top: 20px;
+        margin-top: 28px;
         font-size: 1.5em;
         text-decoration: underline;
         @media screen and (max-width: 920px) {

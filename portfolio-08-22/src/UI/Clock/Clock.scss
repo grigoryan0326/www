@@ -3,12 +3,16 @@
   display: flex;
   flex-flow: column wrap;
   width: 100%;
-  height: clamp(6.875rem, 3.275rem + 16vw, 9.375rem);
+  // height: clamp(6.875rem, 3.275rem + 16vw, 9.375rem);
+  height: clamp(6.25rem, 1.75rem + 20vw, 9.375rem);
   .block {
     width: calc((100% - 40px) / 12);
     height: 20%;
-    color: rgba(0, 0, 0, 0.07);
+    color: rgba(0, 0, 0, 0.1);
     transition: 0.4s;
+    [data-theme="dark"] & {
+      color: rgba(255, 255, 255, 0.1);
+    }
 
     &:not(:nth-child(n + 16)):nth-child(n + 11),
     &:not(:nth-child(n + 46)):nth-child(n + 41) {

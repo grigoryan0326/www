@@ -48,7 +48,7 @@ const SocialTooltip = () => {
       </li>
       <li className='icon-content'>
         <a
-          href='fb://profile/grigoryan.00'
+          href='https://www.facebook.com/grigoryan.00'
           target='_blank'
           rel='noreferrer'
           aria-label='Facebook'

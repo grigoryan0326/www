@@ -1,4 +1,4 @@
-import "./TakeATour.scss"
+import "./TakeATourBtn.scss"
 
 const TakeATourBtn = () => {
   return (
