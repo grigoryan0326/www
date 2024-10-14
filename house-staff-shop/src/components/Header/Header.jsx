@@ -38,6 +38,7 @@ const Header = ({ orders, onDelete }) => {
           <li>Cabinet</li>
         </ul>
         <div className={s.shopCardWrapper}>
+          <div className={s.shopCardText}>{orders.length}</div>
           {!cardOpen && (
             <RiShoppingBasket2Fill
               className={

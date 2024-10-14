@@ -6,6 +6,8 @@ GoCorona/style.css.map
 GoCorona/reset.scss
 GoCorona/mixin.scss
 GoCorona/media.scss
+/test/
+/portfolio-08-22/
 test.html
 test.scss
 .gitignore
