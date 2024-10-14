@@ -1,0 +1,145 @@
+.header {
+  margin-bottom: 50px;
+  padding-block: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  position: relative;
+  z-index: 11;
+  min-height: 75px;
+  @media (max-width: 920px) {
+    margin-bottom: 30px;
+    padding: 20px;
+  }
+  @media (max-width: 480px) {
+    margin-bottom: 10px;
+  }
+  @media (orientation: landscape) and (max-width: 920px) {
+    padding-inline: 40px;
+  }
+}
+
+.headerLogo {
+  @media (max-width: 980px) {
+    display: none;
+  }
+}
+
+.navigationList {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  @media (max-width: 920px) {
+    gap: 5px;
+    padding: 10px;
+  }
+  @media (max-width: 480px) {
+    display: none;
+  }
+}
+
+.listItem {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: clamp(1rem, 0.72rem + 1.07vw, 2rem);
+  height: 100%;
+  user-select: none;
+}
+
+// navItems:hover effect
+
+.button {
+  margin: 0;
+  background: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s;
+  --border-right: 0px;
+  --text-stroke-color: var(--text-color-primary);
+  --animation-color: var(--text-color-primary);
+  letter-spacing: 2px;
+  text-decoration: none;
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+  .hoverText {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+  }
+
+  &:hover .hoverText {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color));
+  }
+}
+
+.buttonActive {
+  --text-stroke-color: var(--text-color-secondary);
+  --animation-color: var(--text-color-secondary);
+}
+
+.active {
+  color: var(--text-color-secondary);
+}
+
+/* ================ BURGER ================ */
+
+.headerBurger {
+  position: relative;
+  display: none;
+  @media (max-width: 480px) {
+    display: block;
+  }
+}
+
+.burgerNavigation {
+  display: none;
+}
+
+.burgerNavigationOpen {
+  display: block;
+  position: relative;
+  &::after {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    content: "";
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 50;
+  }
+}
+
+.burgerNavigationList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 2rem;
+  color: var(--text-color-primary);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 0;
+  transform: translateY(-20%);
+  text-align: center;
+  z-index: 51;
+}
+
+.burgerListItem {
+  &:hover {
+    color: var(--text-color-secondary);
+  }
+}

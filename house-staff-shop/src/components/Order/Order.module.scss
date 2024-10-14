@@ -1,0 +1,39 @@
+.order {
+  max-width: 100%;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #ca5252;
+
+  .orderImg {
+    width: 70px;
+    aspect-ratio: 1;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 1s ease;
+    &:hover {
+      transform: scale(3);
+    }
+  }
+  .orderTitle {
+    font-size: 20px;
+    font-weight: 400;
+  }
+  .orderPrice {
+    font-size: 20px;
+    color: #ca5252;
+    font-weight: 500;
+  }
+
+  .delete {
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.5s ease;
+
+    &:hover {
+      transform: scale(1.5);
+      color: #ca5252;
+    }
+  }
+}

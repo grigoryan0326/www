@@ -1,0 +1,31 @@
+.arrivals {
+  margin-bottom: 143px;
+  font-size: 48px;
+  letter-spacing: 6%;
+  line-height: 1.04;
+  font-weight: 900;
+
+  .arrivalsTitle {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 114px;
+    &::after {
+      position: absolute;
+      background: url(../../img/icons/decor-yellow.svg);
+      background-repeat: no-repeat;
+      width: 190px;
+      height: 32px;
+      right: 0;
+      bottom: 0;
+      content: "";
+      z-index: -1;
+    }
+  }
+
+  .arrivalsCards{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+}

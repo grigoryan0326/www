@@ -1,0 +1,132 @@
+/* ================ FONTS ================ */
+
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  font: inherit;
+  transition: 0.5s;
+  color: inherit;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+body {
+  background: var(--color--white);
+  font-size: 16px;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: var(--color--text);
+}
+
+.wrapper {
+  overflow: hidden;
+}
+
+[class*=__container] {
+  max-width: 1140px;
+  padding-inline: 15px;
+  margin-inline: auto;
+}
+
+.btn-primary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 58px;
+  color: var(--color--white);
+  font-weight: 700;
+  background: var(--color--orange);
+  padding-inline: 37px;
+  border-radius: var(--border--radius29);
+  white-space: nowrap;
+
+  &:hover {
+    background: var(--color--text);
+  }
+}
+
+.btn {
+
+  &__secondary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 58px;
+    color: var(--color--text);
+    font-weight: 700;
+    background: var(--color--white);
+    padding-inline: 37px;
+    border-radius: var(--border--radius29);
+    white-space: nowrap;
+
+    &:hover {
+      color: var(--color--white);
+      background: var(--color--text);
+    }
+  }
+}
+
+.section {
+  &__title {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 147%;
+    letter-spacing: .8px;
+  }
+
+  &__subtitle {
+    color: var(--color--white);
+    margin-bottom: 30px;
+    letter-spacing: 1.15;
+    line-height: 168%;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  &__img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  &__text {
+    margin-left: 4px;
+    font-size: 24px;
+    font-weight: 700;
+  }
+}

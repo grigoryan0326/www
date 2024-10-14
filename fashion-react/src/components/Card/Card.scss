@@ -1,0 +1,43 @@
+@import '../../styles/variables';
+
+.card{
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+
+  .cardImg{
+    max-width: 484px;
+    margin-bottom: 28px;
+    height: 704px;
+  }
+
+  .cardInfo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+    padding: 0 10px 10px 10px;
+  }
+
+  .cardTitle{
+    font-size: 32px;
+    letter-spacing: -5%;
+  }
+
+  .cardExplore{
+    font-size: 24px;
+    letter-spacing: -4%;
+    color: #7F7F7F;
+  }
+
+  .cardInfoRight{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .4s ease;
+
+    &:hover{
+      transform: scale(1.2);
+    }
+  }
+}

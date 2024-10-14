@@ -1,0 +1,1 @@
+This small tool was created using vanilla JS. It allows you to download any open source file to your device.

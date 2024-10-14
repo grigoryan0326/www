@@ -1,0 +1,93 @@
+@import "../../../../styles/variables.scss";
+
+.days {
+  padding: 20px;
+  width: 100%;
+  background: var(#{--components-background-default});
+  box-shadow: $box-shadow;
+  border-radius: 0 0 $border-radius $border-radius;
+}
+
+.days__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(#{--card-background-default});
+  border-radius: 10px;
+  padding: 10px;
+  width: 149px;
+  transition: 0.3s;
+  cursor: pointer;
+
+  .day {
+    margin-bottom: 7px;
+    font-size: 18px;
+    color: var(#{--text-color-default})
+  }
+
+  .day__info {
+    font-size: 14px;
+    margin-bottom: 12px;
+    color: $base-color;
+  }
+
+  .img {
+    margin-bottom: 12px;
+  }
+
+  .temp__day {
+    font-size: 18px;
+    color: var(#{--text-color-default})
+  }
+
+  .temp__night {
+    font-size: 13px;
+    color: $base-color;
+    margin-bottom: 6px;
+  }
+
+  .info {
+    font-size: 13px;
+    color: $base-color;
+  }
+
+  &:hover {
+    box-shadow: var(#{--card-shadow-default});
+  }
+}
+
+/* ================ TABS ================ */
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 7px;
+
+  .tabs__wrapper {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+  .cancel,
+  .tab {
+    box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+    border-radius: 5px;
+    padding: 9px 20px;
+    background: var(#{--components-background-default});
+    color: var(#{--text-color-default});
+    font-size: 18px;
+  }
+
+  .tab {
+    &.active {
+      background: $primary-color;
+      color: #fff;
+    }
+  }
+}

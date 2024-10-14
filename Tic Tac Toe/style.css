@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  font: inherit;
+  transition: 0.5s;
+  color: inherit;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  color: inherit;
+}
+
+/* ================ BODY ================ */
+
+body {
+  font-family: "Merriweather", serif;
+  background: #C600FF;
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* ================ SELECT BOX ================ */
+
+.select-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgb(244, 106, 106);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  max-width: 333px;
+  width: 100%;
+  box-shadow: 5px 5px rgba(244, 106, 106, .3);
+  transition: all .3s ease;
+}
+
+.select-box.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.select-box header {
+  font-size: 40px;
+  font-weight: 600;
+  border-bottom: 1px solid #ffffff;
+  padding-bottom: 10px;
+}
+
+.content {
+  font-size: 20px;
+  margin: 20px 0;
+  font-weight: 500;
+}
+
+.options {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.options button,
+.result-box .btn button {
+  padding: 8px 0;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  background: #C600FF;
+  border-radius: 5px;
+  transition: all .3s ease;
+}
+
+.options button:hover,
+.result-box .btn button:hover {
+  background: #8102a3;
+}
+
+.playerx {
+  margin-right: 10px;
+}
+
+/* ================ PLAYBOARD ================ */
+
+.play-board {
+  opacity: 0;
+  pointer-events: none;
+  transition: all .3s ease;
+}
+
+.play-board.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.play-board .details {
+  background: white;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.play-board .players {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+
+.play-board .players span {
+  width: 100%;
+  text-align: center;
+  border-radius: 5px;
+  padding: 8px 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #C600FF;
+  position: relative;
+  z-index: 5;
+  transition: all .3s ease;
+}
+
+.play-board .players span:first-child {
+  margin-right: 10px;
+  color: white;
+}
+
+.play-board .slider {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  content: "";
+  background: #C600FF;
+  border-radius: 5px;
+  z-index: 2;
+  transition: all .3s ease;
+}
+
+.players.active span:first-child{
+  color: #C600FF;  
+}
+
+.players.active span:nth-child(2){
+  color: white;
+}
+
+.players.active .slider{
+  left: 50%;
+}
+
+.play-board .play-area {
+  margin-top: 2px;
+}
+
+.play-board section {
+  display: flex;
+}
+
+.play-board section span {
+  display: block;
+  height: 80px;
+  width: 80px;
+  background: white;
+  margin: 2px;
+  font-size: 50px;
+  color: #C600FF;
+  line-height: 80px;
+  text-align: center;
+}
+
+/* ================ RESULT BOX ================ */
+
+.result-box {
+  background: rgb(244, 106, 106);
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 333px;
+  width: 100%;
+  display: none;
+}
+
+.result-box .won-text {
+  font-size: 25px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+}
+
+.result-box .won-text p {
+  font-weight: 600;
+  margin: 0 5px;
+  color: black;
+}
+
+.result-box .btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.result-box .btn button {
+  width: fit-content;
+  padding: 10px 20px;
+}

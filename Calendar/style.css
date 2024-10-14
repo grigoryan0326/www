@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
+body {
+  font-family: "Tilt Neon", sans-serif;
+  background: rgb(163, 34, 77);
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  min-height: 100vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  font: inherit;
+  transition: 0.5s;
+  color: inherit;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  color: inherit;
+}
+
+/* ================ BODY ================ */
+
+.wrapper {
+  background: rgb(83, 89, 176);
+  border-radius: 10px;
+}
+
+.wrapper header {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 30px 10px;
+}
+
+.calendar ul {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.current-date {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+header .icons span {
+  color: white;
+  height: 38px;
+  font-size: 1.9rem;
+  width: 38px;
+  margin: 0 1px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 50%;
+}
+
+header .icons span:hover {
+  background: #c4c2c2;
+  ;
+}
+
+.calendar {
+  padding: 25px;
+  font-size: 1.2rem;
+}
+
+.calendar ul li {
+  width: calc(100% / 7);
+  position: relative;
+}
+
+.calendar .weeks li {
+  font-weight: 500;
+}
+
+.calendar .days li {
+  margin-top: 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.days li.inactive {
+  color: #aaa;
+}
+
+.days li.active {
+  color: #fff;
+}
+
+.days li.active::before {
+  background: #9b59b6;
+}
+
+.calendar .days li::before {
+  z-index: -1;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  left: 50%;
+  content: "";
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.days li:hover::before {
+  background: #c4c2c2;
+}

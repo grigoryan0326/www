@@ -1,0 +1,73 @@
+.item {
+  position: relative;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 30%;
+  min-width: 300px;
+  background: #eedecf;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  &:hover {
+    transform: scale(1.1);
+    .itemDesc {
+      text-overflow: clip;
+      white-space: normal;
+    }
+    .itemInfo {
+      gap: 0px;
+    }
+  }
+}
+
+.imgWrapper {
+  height: 100%;
+}
+
+.itemImg {
+  aspect-ratio: 1;
+  height: 100%;
+}
+
+.itemInfo {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  .itemTitle,
+  .itemDesc {
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .itemPrice {
+    color: #ca5252;
+  }
+}
+
+.addToCard {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  right: 50%;
+  bottom: 10px;
+  transform: translateX(50%);
+  content: "+";
+  text-align: center;
+  line-height: 35px;
+  background: #333;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 600;
+
+  &:hover {
+    background-color: #ca5252;
+  }
+}

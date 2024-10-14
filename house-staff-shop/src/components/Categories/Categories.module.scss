@@ -1,0 +1,23 @@
+.categories {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 50px;
+
+  .category {
+    transition: all 0.5 ease;
+    background: #eedecf;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 15px;
+    font-size: 16px;
+    color: goldenrod;
+    font-weight: 400;
+
+    &:hover {
+      color: #333;
+    }
+  }
+}

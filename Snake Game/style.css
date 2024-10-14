@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  font: inherit;
+  transition: 0.5s;
+  color: inherit;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  color: inherit;
+}
+
+body {
+  font-family: "Lilita One", sans-serif;
+  min-height: 100vh;
+  background: rgb(10, 7, 42);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================ BODY ================ */
+
+.wrapper {
+  width: 65vmin;
+  height: 70vmin;
+  background: #293447;
+  border-radius: 5px;
+}
+
+.game-details {
+  font-size: 33px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  color: #938585;
+  padding: 10px 20px 10px 20px;
+  border: 5px solid rgb(153, 132, 132);
+  border-bottom: none;
+}
+
+.game-details span {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.game-details span.colored {
+  color: rgb(24, 24, 24);
+  font-size: 44px;
+}
+
+.game-details .reset {
+  font-size: 16px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #1e2633;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: 400;
+}
+
+.game-details .reset:hover {
+  background: #ed1111;
+  color: black;
+}
+
+.play-board {
+  width: 100%;
+  height: 100%;
+  background: #1d2634;
+  display: grid;
+  grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+  padding: 5px;
+  border: 5px solid rgb(153, 132, 132);
+}
+
+.play-board .food {
+  background: rgb(191, 17, 17);
+  border-radius: 50%;
+}
+
+.play-board .snake {
+  background: rgb(93, 93, 210);
+}
+
+.play-board .snake:nth-child(1) {
+  border-radius: 50%;
+}
