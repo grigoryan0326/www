@@ -1,0 +1,17 @@
+.loading {
+  color: whitesmoke;
+  font-size: 50px;
+  margin: 0 auto;
+  margin-top: 100px;
+  width: fit-content;
+  animation: loading 2s linear infinite;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

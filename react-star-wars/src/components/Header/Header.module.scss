@@ -1,0 +1,29 @@
+@import "@styles/variables.scss";
+
+.container {
+  display: flex;
+  align-items: center;
+  margin-bottom: $spacing-large;
+  .list__container {
+    display: flex;
+    flex-wrap: wrap;
+    & a {
+      display: block;
+      margin: 0 10px;
+      padding: 10px 20px;
+      color: $color-white;
+      text-align: center;
+      font-weight: 600;
+      font-size: 18px;
+      text-shadow: $text-shadow-yellow;
+      transition: $transition;
+      border: 2px solid transparent;
+      border-radius: $border-radius-small;
+    }
+  }
+}
+.list__container :global(a.active) {
+  border: 2px solid $color-violet;
+  color: $color-violet;
+  text-shadow: none;
+}

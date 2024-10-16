@@ -1,0 +1,10 @@
+@import '@styles/variables.scss';
+
+.App{
+  padding-block: 30px;
+  max-width: $max-width-container;
+  margin: 0 auto;
+  @media (max-width: 1400px){
+    padding-inline: 30px;
+  }
+}

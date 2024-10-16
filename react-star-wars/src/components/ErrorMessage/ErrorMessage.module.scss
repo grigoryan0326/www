@@ -1,0 +1,16 @@
+@import '@styles/variables.scss';
+
+.text{
+  font-size: $fz-header;
+  text-align: center;
+  width: 600px;
+  margin: 0 auto;
+  margin-top: 100px;
+  line-height: 1.7;
+  color: $color-yellow;
+  text-shadow: 0 0 2px $color-white;
+
+  --webkit-text-stroke-color: $color-yellow;
+  --webkit-text-stroke-width: .5px;
+  --webkit-text-fill-color: transparent;
+}

@@ -1,0 +1,21 @@
+@import '@styles/variables.scss';
+
+.notFound__container {
+  margin: 0 auto;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .notFound__img{
+    width: 250px;
+  }
+  .notFound__text{
+    margin-top: 50px;
+    color: $color-white;
+    font-size: $fz-subheader;
+    text-shadow: $text-shadow-blue;
+    & u{
+      color: $color-blue;
+    }
+  }
+}

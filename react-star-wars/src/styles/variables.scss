@@ -1,0 +1,22 @@
+$color-dark-grey: #221f1f;
+$color-white: rgb(212, 201, 201);
+$color-black: #121212;
+$color-yellow: #cccc46;
+$color-blue: #6a83fb;
+$color-violet: #b5b6ff;
+
+$border-radius20: 20px;
+$border-radius-small: 10px;
+$fz-header: 26px;
+$fz-subheader: 20px;
+$spacing-medium: 20px;
+$spacing-large: 30px;
+$max-width-container: 1200px;
+
+$transition: 0.4s;
+
+$text-shadow-yellow: 0 0 2px $color-white, 0 0 40px $color-yellow;
+$text-shadow-blue: 0 0 2px $color-white, 0 0 40px $color-blue;
+
+$theme-default-header: #cccc46;
+$theme-default-bgimage: url(../static/bg.jpg);
