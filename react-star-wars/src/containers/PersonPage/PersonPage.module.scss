@@ -1,0 +1,22 @@
+@import "@styles/variables.scss";
+
+.container {
+  $color-name: $color-violet;
+
+  margin-top: 30px;
+  color: $color-black;
+  .person__name {
+    background: $color-name;
+    font-size: $fz-subheader;
+    font-weight: 600;
+    padding: $spacing-small;
+    border-radius: 5px;
+  }
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 30px;
+    border-left: 5px solid $color-name;
+  }
+}

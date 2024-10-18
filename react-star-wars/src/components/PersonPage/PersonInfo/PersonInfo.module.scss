@@ -1,0 +1,19 @@
+@import "@styles/variables.scss";
+
+.container {
+  width: 300px;
+  padding: $spacing-medium;
+  border-radius: $spacing-medium;
+  background: rgba($color: #000000, $alpha: 0.65);
+  color: $color-white;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+  .list__item {
+    margin-bottom: 7px;
+    .item__title {
+      text-shadow: $text-shadow-blue;
+      margin-right: 10px;
+    }
+  }
+}
