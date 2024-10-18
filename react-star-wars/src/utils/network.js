@@ -14,8 +14,3 @@ export const getApiResource = async (url) => {
     return false
   }
 }
-
-// ;(async () => {
-//   const body = await getApiResource(`${SWAPI_ROOT}${SWAPI_PEOPLE}/`)
-//   console.log(body)
-// })()

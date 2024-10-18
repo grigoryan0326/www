@@ -19,12 +19,15 @@
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "plugin:storybook/recommended"
     ]
   },
   "browserslist": {
@@ -40,7 +43,20 @@
     ]
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "^1.9.0",
+    "@storybook/addon-essentials": "^8.3.6",
+    "@storybook/addon-interactions": "^8.3.6",
+    "@storybook/addon-links": "^8.3.6",
+    "@storybook/addon-onboarding": "^8.3.6",
+    "@storybook/blocks": "^8.3.6",
+    "@storybook/preset-create-react-app": "^8.3.6",
+    "@storybook/react": "^8.3.6",
+    "@storybook/react-webpack5": "^8.3.6",
+    "@storybook/test": "^8.3.6",
+    "eslint-plugin-storybook": "^0.9.0",
     "react-app-rewire-alias": "^1.1.7",
-    "react-app-rewired": "^2.2.1"
+    "react-app-rewired": "^2.2.1",
+    "storybook": "^8.3.6",
+    "webpack": "^5.95.0"
   }
 }

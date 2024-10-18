@@ -1,31 +1,28 @@
 import PropTypes from "prop-types"
 import { Link } from "react-router-dom"
+import UiButton from "@ui/UiButton/UiButton"
 import styles from "./PeopleNavigation.module.scss"
 
-const PeopleNavigation = ({  counterPage, nextPage, prevPage }) => {
+const PeopleNavigation = ({ counterPage, nextPage, prevPage }) => {
   return (
     <div className={styles.container}>
       <Link
         to={`/people/?page=${counterPage - 1}`}
         className={styles.link}
       >
-        <button
-          className={styles.button}
+        <UiButton
+          text='Previous'
           disabled={!prevPage}
-        >
-          Previous
-        </button>
+        />
       </Link>
       <Link
         to={`/people/?page=${counterPage + 1}`}
         className={styles.link}
       >
-        <button
-          className={styles.button}
+        <UiButton
+          text='Next'
           disabled={!nextPage}
-        >
-          Next
-        </button>
+        />
       </Link>
     </div>
   )
