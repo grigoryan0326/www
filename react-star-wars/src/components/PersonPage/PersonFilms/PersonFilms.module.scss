@@ -1,0 +1,27 @@
+@import "@styles/variables.scss";
+
+.container {
+  padding: $spacing-medium 0;
+  border-radius: $spacing-medium;
+  .list {
+    .list__item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 7px;
+      color: $color-white;
+      .item__id {
+        border-radius: 5px;
+        background: $color-red;
+        padding: 5px;
+      }
+      .list__colon{
+        font-weight: 600;
+        width: 20px;
+        text-align: center;
+      }
+      .item__title {
+        text-shadow: $text-shadow-yellow;
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@import "@styles/variables.scss";
+
+.link {
+  cursor: pointer;
+  color: $color-yellow;
+  font-size: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: $transition;
+  &:hover{
+    color: $color-violet;
+  }
+  .link__icon {
+    font-size: 40px;
+  }
+  .link__text {
+    font-size: 20px;
+    font-weight: 600;
+  }
+}

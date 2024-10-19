@@ -1,17 +1,27 @@
 import { useParams } from "react-router"
+import React, { Suspense, useEffect, useState } from "react"
+
 import { getApiResource } from "@utils/network"
 import { getPeopleImage } from "@services/getPeopleData"
-import { useEffect, useState } from "react"
-import { API_PERSON } from "../../constants/api"
+import { API_PERSON } from "@constants/api"
+
 import ErrorMessage from "@components/ErrorMessage/ErrorMessage"
+import PersonInfo from "@components/PersonPage/PersonInfo/PersonInfo"
+import PersonPhoto from "@components/PersonPage/PersonPhoto/PersonPhoto"
+import PersonLinkBack from "@components/PersonPage/PersonLinkBack/PersonLinkBack"
+import UiLoading from "@components/UI/UiLoading/UiLoading"
+
 import styles from "./PersonPage.module.scss"
-import PersonInfo from "../../components/PersonPage/PersonInfo/PersonInfo"
-import PersonPhoto from "../../components/PersonPage/PersonPhoto/PersonPhoto"
+
+const PersonFilms = React.lazy(() =>
+  import("@components/PersonPage/PersonFilms/PersonFilms")
+)
 
 const PersonPage = () => {
   const [personInfo, setPersonInfo] = useState(null)
   const [personName, setPersonName] = useState("")
   const [personPhoto, setPersonPhoto] = useState("")
+  const [personFilms, setPersonFilms] = useState([])
   const [error, setError] = useState(false)
   const { id } = useParams()
 
@@ -32,6 +42,7 @@ const PersonPage = () => {
           ])
           setPersonName(res.name)
           setPersonPhoto(getPeopleImage(id))
+          res.films.length && setPersonFilms(res.films)
         }
       } catch (error) {
         console.log(error.message)
@@ -41,19 +52,31 @@ const PersonPage = () => {
     })()
   }, [id])
 
-  return !error ? (
-    <div className={styles.container}>
-      <span className={styles.person__name}>{personName}</span>
-      <div className={styles.wrapper}>
-        <PersonPhoto
-          personPhoto={personPhoto}
-          personName={personName}
-        />
-        {personInfo && <PersonInfo personInfo={personInfo} />}
-      </div>
-    </div>
-  ) : (
-    <ErrorMessage />
+  return (
+    <>
+      {!error ? (
+        <>
+          <PersonLinkBack />
+          <div className={styles.container}>
+            <span className={styles.person__name}>{personName}</span>
+            <div className={styles.wrapper}>
+              <PersonPhoto
+                personPhoto={personPhoto}
+                personName={personName}
+              />
+              {personInfo && <PersonInfo personInfo={personInfo} />}
+              {personFilms && (
+                <Suspense fallback={<UiLoading theme='white' />}>
+                  <PersonFilms personFilms={personFilms} />
+                </Suspense>
+              )}
+            </div>
+          </div>
+        </>
+      ) : (
+        <ErrorMessage />
+      )}
+    </>
   )
 }
 export default PersonPage
