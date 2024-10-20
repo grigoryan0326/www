@@ -1,7 +1,7 @@
-import PropTypes from "prop-types"
-import styles from "./PersonFilms.module.scss"
-import { makeConcurrentRequest } from "../../../utils/network"
 import { useEffect, useState } from "react"
+import PropTypes from "prop-types"
+import { makeConcurrentRequest } from "@utils/network"
+import styles from "./PersonFilms.module.scss"
 
 const PersonFilms = ({ personFilms }) => {
   const [films, setFilms] = useState([])

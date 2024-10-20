@@ -1,5 +1,6 @@
 import { useParams } from "react-router"
 import React, { Suspense, useEffect, useState } from "react"
+import { useSelector } from "react-redux"
 
 import { getApiResource } from "@utils/network"
 import { getPeopleImage } from "@services/getPeopleData"
@@ -22,8 +23,19 @@ const PersonPage = () => {
   const [personName, setPersonName] = useState("")
   const [personPhoto, setPersonPhoto] = useState("")
   const [personFilms, setPersonFilms] = useState([])
+  const [personFavorite, setPersonFavorite] = useState(false)
   const [error, setError] = useState(false)
   const { id } = useParams()
+
+  const storeData = useSelector((state) => state.favoriteReducer)
+
+  useEffect(() => {
+    if (storeData[id]) {
+      setPersonFavorite(true)
+    } else {
+      setPersonFavorite(false)
+    }
+  }, [storeData, id])
 
   useEffect(() => {
     ;(async () => {
@@ -63,6 +75,9 @@ const PersonPage = () => {
               <PersonPhoto
                 personPhoto={personPhoto}
                 personName={personName}
+                id={id}
+                personFavorite={personFavorite}
+                setPersonFavorite={setPersonFavorite}
               />
               {personInfo && <PersonInfo personInfo={personInfo} />}
               {personFilms && (

@@ -7,9 +7,14 @@
     width: 190px;
     margin: 20px;
     border-radius: 20px;
-    background: $color-white;
+    background: rgba(255, 255, 255, 0.7);
     cursor: pointer;
     overflow: hidden;
+    transition: $transition;
+    &:hover{
+      transform: scale(1.1);
+      background: rgba(255, 255, 255, 1);
+    }
     .list__link {
       color: $color-black;
       .list__image {
@@ -20,6 +25,7 @@
       }
       .list__name {
         padding: 10px;
+        font-weight: 600;
       }
     }
   }
