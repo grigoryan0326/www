@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 import Favorite from "../Favorite/Favorite"
 
 import {
@@ -37,11 +37,13 @@ const Header = () => {
 
   return (
     <header className={styles.container}>
-      <img
-        src={icon}
-        className={styles.logo}
-        alt='Star Wars'
-      />
+      <Link to='/'>
+        <img
+          src={icon}
+          className={styles.logo}
+          alt='Star Wars'
+        />
+      </Link>
       <ul className={styles.list__container}>
         <li className={styles.list__item}>
           <NavLink to='/'>Home</NavLink>
