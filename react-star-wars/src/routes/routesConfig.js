@@ -3,6 +3,7 @@ import HomePage from "@containers/HomePage/HomePage"
 import NotFoundPage from "@containers/NotFoundPage/NotFoundPage"
 import PersonPage from "@containers/PersonPage/PersonPage"
 import FavoritePage from "@containers/FavoritePage/FavoritePage"
+import SearchPage from "@containers/SearchPage/SearchPage"
 
 const routesConfig = [
   {
@@ -20,6 +21,10 @@ const routesConfig = [
   {
     path: "/not-found",
     component: NotFoundPage,
+  },
+  {
+    path: "/search",
+    component: SearchPage,
   },
   {
     path: "/favorites",

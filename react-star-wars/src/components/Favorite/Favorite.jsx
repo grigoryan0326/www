@@ -1,8 +1,8 @@
-import { MdBookmark } from "react-icons/md"
+import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import { useSelector } from "react-redux"
+import { MdBookmark } from "react-icons/md"
 import styles from "./Favorite.module.scss"
-import { useEffect, useState } from "react"
 
 const Favorite = () => {
   const [count, setCount] = useState(0)

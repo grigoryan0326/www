@@ -1,0 +1,33 @@
+@import "@styles/variables.scss";
+
+.container {
+  margin-top: 40px;
+  .list {
+    column-count: 3;
+    @media screen and (max-width: 850px)  {
+      column-count: 2;
+    }
+    .list__item {
+      .list__link {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+        .list__img {
+          width: 70px;
+          height: 70px;
+          object-fit: cover;
+          object-position: center center;
+          border-radius: 5px;
+        }
+        .list__name {
+          color: $color-white;
+          text-shadow: $text-shadow-blue;
+        }
+      }
+    }
+  }
+  .noResults {
+    color: $color-white;
+  }
+}

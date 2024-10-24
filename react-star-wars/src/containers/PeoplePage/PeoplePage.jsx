@@ -20,16 +20,18 @@ const PeoplePage = () => {
   const query = useQueryParams()
   const queryPage = query.get("page")
 
+  
   const getResource = useCallback(
     async (url) => {
       setIsLoading(true)
+      
       const res = await getApiResource(url)
-
+      
       if (res) {
         const peopleList = res.results.map(({ name, url }) => {
           const id = getPeopleId(url)
           const image = getPeopleImage(id)
-
+          
           return { name, image, id }
         })
         setPeople(peopleList)
